@@ -1,0 +1,29 @@
+.spotlight-card {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(28, 23, 18, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.spotlight-card:hover {
+  border-color: rgba(242, 121, 42, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(242, 121, 42, 0.15);
+}
+
+.spotlight-card__spotlight {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.spotlight-card__content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
