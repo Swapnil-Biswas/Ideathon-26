@@ -1,12 +1,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ArrowDown, Calendar, MapPin, Sparkles, Trophy, Clock, Users, Cpu } from "lucide-react";
+import { ArrowDown, Calendar, MapPin, Sparkles } from "lucide-react";
 import { eventConfig } from "../../config/eventConfig";
 import RegisterButton from "../shared/RegisterButton";
 import DecryptedText from "../reactbits/DecryptedText";
 import ShinyText from "../reactbits/ShinyText";
 import Squares from "../reactbits/Squares";
-import CountUp from "../reactbits/CountUp";
 
 export default function HeroSection() {
   const sectionRef = useRef(null);
@@ -151,46 +150,6 @@ export default function HeroSection() {
               <ArrowDown size={15} className="text-lab-orange animate-bounce" />
             </a>
           </motion.div>
-        </motion.div>
-
-        {/* Telemetry Stats Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.7 }}
-          className="mt-16 pt-10 border-t border-white/[0.08] grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl"
-        >
-          <div className="flex flex-col items-center lg:items-start">
-            <div className="flex items-center gap-2 text-lab-cream font-mono font-bold text-2xl lg:text-3xl">
-              <Clock className="w-5 h-5 text-lab-orange" />
-              <CountUp to={24} duration={2} suffix="H" />
-            </div>
-            <span className="text-xs text-lab-cream/50 tracking-wider uppercase font-mono mt-1">Hackathon Sprint</span>
-          </div>
-
-          <div className="flex flex-col items-center lg:items-start">
-            <div className="flex items-center gap-2 text-lab-cream font-mono font-bold text-2xl lg:text-3xl">
-              <Users className="w-5 h-5 text-lab-orange" />
-              <CountUp to={500} duration={2.5} suffix="+" />
-            </div>
-            <span className="text-xs text-lab-cream/50 tracking-wider uppercase font-mono mt-1">Participants</span>
-          </div>
-
-          <div className="flex flex-col items-center lg:items-start">
-            <div className="flex items-center gap-2 text-lab-cream font-mono font-bold text-2xl lg:text-3xl">
-              <Trophy className="w-5 h-5 text-lab-orange" />
-              <span className="text-lab-glow font-display">EXCITING</span>
-            </div>
-            <span className="text-xs text-lab-cream/50 tracking-wider uppercase font-mono mt-1">Cash Prizes & Medals</span>
-          </div>
-
-          <div className="flex flex-col items-center lg:items-start">
-            <div className="flex items-center gap-2 text-lab-cream font-mono font-bold text-2xl lg:text-3xl">
-              <Cpu className="w-5 h-5 text-lab-orange" />
-              <CountUp to={3} duration={1.5} suffix=" Tracks" />
-            </div>
-            <span className="text-xs text-lab-cream/50 tracking-wider uppercase font-mono mt-1">Robotics & Mechatronics</span>
-          </div>
         </motion.div>
       </div>
     </section>
