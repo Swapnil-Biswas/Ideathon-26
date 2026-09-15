@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Cpu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import RegisterButton from "../shared/RegisterButton";
 
 export default function Navbar() {
@@ -28,19 +28,16 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-lg bg-lab-charcoal border border-lab-orange/40 flex items-center justify-center text-lab-orange transition-all duration-300 group-hover:border-lab-orange group-hover:shadow-[0_0_15px_rgba(242,121,42,0.4)]">
-            <Cpu className="w-5 h-5" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-display font-black text-lab-cream text-lg tracking-widest leading-none">
-              ARMS
-            </span>
-            <span className="text-[10px] font-mono tracking-widest text-lab-cream/50 uppercase mt-0.5">
-              CONCEPTIA '26
-            </span>
-          </div>
+        {/* Logo & Event Title */}
+        <Link to="/" className="flex items-center gap-3 sm:gap-3.5 group select-none">
+          <img
+            src="/assets/A.R.M.S.png"
+            alt="ARMS Logo"
+            className="h-9 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_12px_rgba(242,121,42,0.35)]"
+          />
+          <span className="font-oxanium text-2xl sm:text-[28px] font-black tracking-wider text-lab-cream leading-none group-hover:text-lab-glow transition-colors">
+            CONCEPTIA<span className="text-lab-orange">'26</span>
+          </span>
         </Link>
 
         {/* Desktop links */}

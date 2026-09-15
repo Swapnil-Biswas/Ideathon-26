@@ -39,13 +39,17 @@ export default function AboutARMS() {
             spotlightColor="rgba(242, 121, 42, 0.25)"
             className="bg-lab-charcoal/80 border-white/[0.08] hover:border-lab-orange/40 rounded-2xl p-8 sm:p-12 shadow-2xl"
           >
-            <div className="flex items-center gap-3 mb-6 pb-6 border-b border-white/[0.06]">
-              <div className="w-12 h-12 rounded-xl bg-lab-orange/10 border border-lab-orange/30 flex items-center justify-center text-lab-orange">
-                <Compass className="w-6 h-6" />
+            <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/[0.06]">
+              <div className="w-14 h-14 rounded-2xl bg-lab-charcoal border border-lab-orange/40 flex items-center justify-center p-2 shadow-lg shadow-black/40 flex-shrink-0 overflow-hidden">
+                <img
+                  src="/assets/A.R.M.S.png"
+                  alt="ARMS Club Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <h3 className="text-lab-cream font-display font-bold text-xl tracking-wide">
-                  The Robotics Society of BMSIT&M
+                  The Robotics Society of BMSIT&amp;M
                 </h3>
                 <span className="text-xs font-mono text-lab-orange tracking-widest">
                   EST. BENGALURU, INDIA
