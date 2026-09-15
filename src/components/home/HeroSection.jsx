@@ -3,7 +3,6 @@ import { useRef, useEffect, useState } from "react";
 import { ArrowDown, Calendar, MapPin, Sparkles } from "lucide-react";
 import { eventConfig } from "../../config/eventConfig";
 import RegisterButton from "../shared/RegisterButton";
-import DecryptedText from "../reactbits/DecryptedText";
 
 function HeroEmbers() {
   const canvasRef = useRef(null);
@@ -77,13 +76,113 @@ function HeroEmbers() {
   );
 }
 
+function DrillTipSparkles() {
+  const sparks = [
+    { dx: 16, dy: -12, delay: 0, duration: 0.65, size: 2 },
+    { dx: 24, dy: -8, delay: 0.2, duration: 0.55, size: 2.5 },
+    { dx: 20, dy: -20, delay: 0.45, duration: 0.75, size: 3 },
+    { dx: 30, dy: -14, delay: 0.1, duration: 0.6, size: 1.8 },
+    { dx: 12, dy: -24, delay: 0.65, duration: 0.7, size: 2.2 },
+    { dx: 26, dy: -25, delay: 0.35, duration: 0.8, size: 2 },
+  ];
+
+  return (
+    <div className="absolute top-[34%] left-[88%] -translate-x-1/2 -translate-y-1/2 pointer-events-none z-30 select-none">
+      {/* 1. Ambient Arc Flash Bloom (rapid high-frequency micro-flicker) */}
+      <motion.div
+        animate={{
+          scale: [0.9, 1.4, 1, 1.45, 0.95],
+          opacity: [0.55, 0.95, 0.65, 1, 0.6],
+        }}
+        transition={{
+          duration: 0.4,
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut",
+        }}
+        className="absolute -inset-3 bg-radial from-amber-400/90 via-lab-orange/50 to-transparent rounded-full blur-[4px]"
+      />
+
+      {/* 2. Plasma Core Flame Lick (aligned with nozzle axis, pointing ~30 deg up-right) */}
+      <motion.div
+        animate={{
+          scaleX: [0.85, 1.3, 0.8, 1.35, 0.9],
+          scaleY: [0.9, 1.15, 0.85, 1.2, 0.9],
+          opacity: [0.8, 1, 0.75, 1, 0.8],
+        }}
+        transition={{
+          duration: 0.28,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="absolute top-1/2 left-1/2 w-6 h-2 -translate-y-1/2 origin-left -rotate-[28deg] bg-gradient-to-r from-white via-amber-300 to-transparent rounded-full blur-[0.8px] shadow-[0_0_10px_#ffb347]"
+      />
+
+      {/* 3. Intense White-Hot Arc Center Point */}
+      <motion.div
+        animate={{
+          scale: [0.85, 1.35, 0.9, 1.3, 0.85],
+          opacity: [0.9, 1, 0.85, 1, 0.9],
+        }}
+        transition={{
+          duration: 0.16,
+          repeat: Infinity,
+          repeatType: "mirror",
+        }}
+        className="relative w-2 h-2 rounded-full bg-white shadow-[0_0_12px_3px_#ffea79,0_0_24px_6px_#f2792a]"
+      />
+
+      {/* 4. Four-point Glint Starburst Shimmer */}
+      <motion.svg
+        viewBox="0 0 24 24"
+        animate={{
+          rotate: [0, 45, 90, 135, 180],
+          scale: [0.75, 1.3, 0.7, 1.4, 0.8],
+          opacity: [0.7, 1, 0.6, 1, 0.7],
+        }}
+        transition={{
+          duration: 1.1,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute -top-2.5 -left-2.5 w-7 h-7 text-amber-100 pointer-events-none drop-shadow-[0_0_8px_#ffffff]"
+        fill="currentColor"
+      >
+        <path d="M12 0 L13.8 8.2 L22 12 L13.8 15.8 L12 24 L10.2 15.8 L2 12 L10.2 8.2 Z" />
+      </motion.svg>
+
+      {/* 5. Molten Sparks Spraying Outward */}
+      {sparks.map((spark, idx) => (
+        <motion.span
+          key={idx}
+          initial={{ x: 0, y: 0, opacity: 0, scale: 0 }}
+          animate={{
+            x: [0, spark.dx * 0.4, spark.dx],
+            y: [0, spark.dy * 0.4, spark.dy],
+            opacity: [1, 1, 0],
+            scale: [spark.size * 0.5, spark.size, 0],
+          }}
+          transition={{
+            duration: spark.duration,
+            repeat: Infinity,
+            delay: spark.delay,
+            ease: "easeOut",
+          }}
+          style={{ width: spark.size, height: spark.size }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-amber-200 shadow-[0_0_6px_#f2792a]"
+        />
+      ))}
+    </div>
+  );
+}
+
 function AnimatedPhineas() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-      className="hidden md:block absolute bottom-0 left-3 sm:left-6 lg:left-10 xl:left-16 z-20 pointer-events-none select-none"
+      className="hidden md:block absolute bottom-4 sm:bottom-6 lg:bottom-8 left-3 sm:left-6 lg:left-10 xl:left-16 z-20 pointer-events-none select-none"
     >
       {/* Realistic Cinematic Idle Motion */}
       <motion.div
@@ -121,16 +220,8 @@ function AnimatedPhineas() {
           }}
         />
 
-        {/* Realistic Welder Core Light Flare */}
-        <motion.div
-          animate={{
-            opacity: [0.65, 0.9, 0.65],
-            scale: [0.95, 1.1, 0.95],
-          }}
-          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[32%] right-[10%] w-2.5 h-2.5 bg-amber-400 rounded-full blur-[2px] shadow-[0_0_10px_#f2792a] pointer-events-none"
-        />
-        <div className="absolute top-[32%] right-[10%] w-1 h-1 bg-white rounded-full shadow-[0_0_4px_#ffffff] pointer-events-none" />
+        {/* Sparkling Plasma Arc at the Tip of the Drill/Welder */}
+        <DrillTipSparkles />
       </motion.div>
     </motion.div>
   );
@@ -142,7 +233,7 @@ function AnimatedFerb() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, delay: 0.45, ease: "easeOut" }}
-      className="hidden md:block absolute bottom-0 right-3 sm:right-6 lg:right-10 xl:right-16 z-20 pointer-events-none select-none"
+      className="hidden md:block absolute bottom-4 sm:bottom-6 lg:bottom-8 right-3 sm:right-6 lg:right-10 xl:right-16 z-20 pointer-events-none select-none"
     >
       {/* Realistic Cinematic Idle Motion */}
       <motion.div
@@ -179,16 +270,6 @@ function AnimatedFerb() {
             maskImage: "linear-gradient(to bottom, black 90%, transparent 100%)",
             WebkitMaskImage: "linear-gradient(to bottom, black 90%, transparent 100%)",
           }}
-        />
-
-        {/* Realistic Holographic Tablet Glow */}
-        <motion.div
-          animate={{
-            opacity: [0.45, 0.75, 0.45],
-            scale: [0.95, 1.05, 0.95],
-          }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-          className="absolute top-[32%] left-[10%] w-4 h-4 bg-cyan-400/40 rounded-full blur-[3px] pointer-events-none"
         />
       </motion.div>
     </motion.div>
@@ -257,16 +338,11 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-lab-charcoal/85 border border-lab-orange/40 backdrop-blur-md mb-6 shadow-[0_0_20px_rgba(242,121,42,0.2)]"
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lab-charcoal/80 border border-lab-orange/30 backdrop-blur-md mb-6"
         >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lab-orange opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-lab-orange" />
-          </span>
-          <span className="font-oxanium text-xs font-semibold tracking-[0.2em] text-lab-cream/95 flex items-center gap-2">
-            <span className="text-lab-orange font-bold text-sm tracking-tighter">&gt;&gt;&gt;</span>
-            <span>ARMS BMSIT PRESENTS</span>
-            <span className="text-lab-orange font-bold text-sm tracking-tighter">&lt;&lt;&lt;</span>
+          <span className="w-1.5 h-1.5 rounded-full bg-lab-orange" />
+          <span className="font-oxanium text-xs font-semibold tracking-[0.22em] text-lab-cream/90 uppercase">
+            ARMS BMSIT PRESENTS
           </span>
         </motion.div>
 
@@ -284,25 +360,18 @@ export default function HeroSection() {
           <div className="h-px flex-1 bg-gradient-to-l from-transparent via-lab-orange/60 to-lab-glow" />
         </motion.div>
 
-        {/* Main Title: Unique Stylized Typography */}
+        {/* Main Title: Crisp Bold Typography */}
         <motion.div
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
           className="relative my-1"
         >
-          {/* Subtle Ambient Behind-Text Glow */}
+          {/* Ambient Behind-Text Glow */}
           <div className="absolute inset-0 bg-lab-orange/20 blur-3xl -z-10 rounded-full scale-125 pointer-events-none" />
 
           <h1 className="font-oxanium text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-[0.14em] sm:tracking-[0.2em] leading-none uppercase select-none text-transparent bg-clip-text bg-gradient-to-b from-white via-amber-100 to-lab-orange filter drop-shadow-[0_0_35px_rgba(242,121,42,0.5)]">
-            <DecryptedText
-              text="CONCEPTIA"
-              speed={30}
-              maxIterations={14}
-              className="text-transparent bg-clip-text bg-gradient-to-b from-white via-[#fde047] to-lab-orange font-black"
-              encryptedClassName="text-lab-orange/70 font-mono"
-              animateOn="view"
-            />
+            CONCEPTIA
           </h1>
         </motion.div>
 
@@ -311,22 +380,20 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.6 }}
-          className="flex items-center justify-center gap-2 sm:gap-4 mt-3 mb-4 text-lab-cream/85 text-[11px] sm:text-xs md:text-sm font-rajdhani font-semibold tracking-[0.25em] sm:tracking-[0.38em] uppercase"
+          className="flex items-center justify-center gap-3 sm:gap-4 mt-3 mb-4 text-lab-cream/80 text-[11px] sm:text-xs md:text-sm font-rajdhani font-semibold tracking-[0.25em] sm:tracking-[0.35em] uppercase"
         >
-          <div className="h-px w-6 sm:w-16 bg-gradient-to-r from-transparent to-lab-orange/60" />
-          <span className="text-lab-orange text-[9px] shadow-[0_0_8px_#f2792a]">◇</span>
+          <div className="h-px w-8 sm:w-16 bg-gradient-to-r from-transparent to-lab-orange/50" />
           <span>CODE</span>
-          <span className="text-lab-orange/60">•</span>
+          <span className="text-lab-orange/40">•</span>
           <span>INNOVATE</span>
-          <span className="text-lab-orange/60">•</span>
+          <span className="text-lab-orange/40">•</span>
           <span>BUILD</span>
-          <span className="text-lab-orange/60">•</span>
+          <span className="text-lab-orange/40">•</span>
           <span>WIN</span>
-          <span className="text-lab-orange text-[9px] shadow-[0_0_8px_#f2792a]">◇</span>
-          <div className="h-px w-6 sm:w-16 bg-gradient-to-l from-transparent to-lab-orange/60" />
+          <div className="h-px w-8 sm:w-16 bg-gradient-to-l from-transparent to-lab-orange/50" />
         </motion.div>
 
-        {/* Cyber HUD Edition Badge (like [2.0] in reference) */}
+        {/* Cyber HUD Edition Badge */}
         <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -348,19 +415,18 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Big Punchy Hook Headline (Reference: 3 DAYS · 24 ARENAS · ONE NATIONAL STAGE |) */}
+        {/* Hook Headline */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.65, duration: 0.7 }}
-          className="mt-6 mb-3 font-oxanium font-bold text-lg sm:text-2xl md:text-3xl tracking-[0.14em] sm:tracking-[0.2em] text-lab-cream text-glow-amber"
+          className="mt-6 mb-3 font-oxanium font-bold text-base sm:text-2xl md:text-3xl tracking-[0.14em] sm:tracking-[0.2em] text-lab-cream text-glow-amber"
         >
-          <span>24 HOURS</span>
-          <span className="text-lab-orange mx-2.5 sm:mx-4">•</span>
-          <span>3 TRACKS</span>
-          <span className="text-lab-orange mx-2.5 sm:mx-4">•</span>
-          <span>ONE NATIONAL STAGE</span>
-          <span className="text-lab-orange ml-1.5 animate-cursor-blink font-light">|</span>
+          <span>3 ROUNDS</span>
+          <span className="text-lab-orange mx-2 sm:mx-4">•</span>
+          <span>50 TEAMS CAPPED</span>
+          <span className="text-lab-orange mx-2 sm:mx-4">•</span>
+          <span>₹15,000 PRIZE POOL</span>
         </motion.div>
 
         {/* Centered Contextual Description */}
@@ -370,8 +436,7 @@ export default function HeroSection() {
           transition={{ delay: 0.75, duration: 0.6 }}
           className="max-w-2xl mx-auto text-lab-cream/80 text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-6 font-body"
         >
-          Step through the gateway into the BMSIT&amp;M Innovation Arena, Bengaluru — open to
-          engineers, hackers, and visionary builders from across the nation.
+          A premier one-day ideation challenge organized by ARMS at BMSIT&amp;M — solve real-world industry problem statements, pitch to corporate judges, and win cash prizes plus fast-tracked internship opportunities.
         </motion.p>
 
         {/* Centered Date & Venue Pill Badge */}
@@ -390,6 +455,8 @@ export default function HeroSection() {
             <MapPin className="w-4 h-4 text-lab-orange" />
             <span>{eventConfig.venue}</span>
           </div>
+          <span className="text-lab-orange/50 hidden sm:inline">•</span>
+          <span className="text-emerald-400 font-semibold uppercase text-[11px] sm:text-xs">FREE ENTRY</span>
         </motion.div>
 
         {/* Action Buttons Centered */}
@@ -405,7 +472,7 @@ export default function HeroSection() {
             className="w-full sm:w-auto text-lab-cream/85 text-xs sm:text-sm font-oxanium tracking-widest font-semibold hover:text-lab-orange hover:border-lab-orange/60 transition-all duration-300 flex items-center justify-center gap-2 px-6 py-4 rounded-xl border border-white/15 bg-white/[0.03] backdrop-blur-sm shadow-md"
           >
             <span>EXPLORE GUIDELINES</span>
-            <ArrowDown size={15} className="text-lab-orange animate-bounce" />
+            <ArrowDown size={15} className="text-lab-orange" />
           </a>
         </motion.div>
       </motion.div>

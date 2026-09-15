@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Maximize2, Image as ImageIcon } from "lucide-react";
 import Lightbox from "../shared/Lightbox";
 import TiltCard from "../shared/TiltCard";
-import ShinyText from "../reactbits/ShinyText";
 
 export default function PosterSection() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -13,8 +12,8 @@ export default function PosterSection() {
       <div className="relative max-w-3xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-black border border-lab-orange/30 backdrop-blur-md mb-4">
           <ImageIcon className="w-3.5 h-3.5 text-lab-orange" />
-          <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-            <ShinyText text="OFFICIAL EXHIBIT" speed={4} />
+          <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+            OFFICIAL EXHIBIT
           </span>
         </div>
 

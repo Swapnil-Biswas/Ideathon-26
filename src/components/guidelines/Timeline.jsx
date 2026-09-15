@@ -1,16 +1,18 @@
 import { motion } from "framer-motion";
 import { Clock } from "lucide-react";
-import ShinyText from "../reactbits/ShinyText";
 
 const stages = [
-  { name: "CHECK-IN & KITS", time: "08:30 AM", phase: "PHASE 01" },
-  { name: "BRIEFING & SPECS", time: "09:30 AM", phase: "PHASE 02" },
-  { name: "IDEATION SPRINT", time: "10:15 AM", phase: "PHASE 03" },
-  { name: "HARDWARE BUILD", time: "01:00 PM", phase: "PHASE 04" },
-  { name: "MENTOR REVIEW", time: "04:30 PM", phase: "PHASE 05" },
-  { name: "PITCH & JURY", time: "06:30 PM", phase: "PHASE 06" },
-  { name: "EVALUATION", time: "08:00 PM", phase: "PHASE 07" },
-  { name: "FELICITATION", time: "09:00 PM", phase: "PHASE 08" },
+  { name: "CHECK-IN & REGISTRATION", time: "09:00 AM", phase: "PHASE 01" },
+  { name: "WELCOME & ROUND OVERVIEW", time: "09:30 AM", phase: "PHASE 02" },
+  { name: "ROUND 1: DIGITAL FILTER", time: "09:45 AM", phase: "PHASE 03" },
+  { name: "REFRESHMENTS BREAK", time: "10:10 AM", phase: "PHASE 04" },
+  { name: "ROUND 2: RAPID PITCH & SURPRISE", time: "10:30 AM", phase: "PHASE 05" },
+  { name: "LUNCH BREAK", time: "11:30 AM", phase: "PHASE 06" },
+  { name: "KEYNOTE & PROBLEM STATEMENT REVEAL", time: "12:05 PM", phase: "PHASE 07" },
+  { name: "ROUND 3: 2-HR IDEATION SPRINT", time: "12:50 PM", phase: "PHASE 08" },
+  { name: "FINAL STAGE PITCHES (14 TEAMS)", time: "02:50 PM", phase: "PHASE 09" },
+  { name: "JURY DELIBERATION", time: "03:50 PM", phase: "PHASE 10" },
+  { name: "PRIZE DISTRIBUTION & CLOSING", time: "04:05 PM", phase: "PHASE 11" },
 ];
 
 export default function Timeline() {
@@ -25,8 +27,8 @@ export default function Timeline() {
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-black border border-lab-orange/30 backdrop-blur-md mb-4">
             <Clock className="w-3.5 h-3.5 text-lab-orange" />
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-              <ShinyText text="SCHEDULE OF OPERATIONS" speed={4} />
+            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+              SCHEDULE OF OPERATIONS
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-black text-lab-cream tracking-tight">

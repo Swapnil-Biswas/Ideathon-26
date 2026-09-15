@@ -1,44 +1,43 @@
 import { motion } from "framer-motion";
-import { Lightbulb, Cpu, Sparkles, Puzzle, Trophy, Presentation } from "lucide-react";
+import { Trophy, Briefcase, FileCode, Users, Layers, Award } from "lucide-react";
 import SpotlightCard from "../reactbits/SpotlightCard";
-import ShinyText from "../reactbits/ShinyText";
 
 const highlights = [
   {
-    icon: Lightbulb,
-    title: "IDEATION",
-    detail: "Rapid brainstorming sessions to formulate bold engineering hypothesis.",
-    code: "SYS-01",
-  },
-  {
-    icon: Puzzle,
-    title: "PROBLEM SOLVING",
-    detail: "Tackle real-world constraints across automation, mechanics, and IoT.",
-    code: "SYS-02",
-  },
-  {
-    icon: Cpu,
-    title: "ENGINEERING",
-    detail: "Turn schematics and CAD designs into functional working hardware systems.",
-    code: "SYS-03",
-  },
-  {
-    icon: Sparkles,
-    title: "INNOVATION",
-    detail: "Push beyond baseline conventional methods with novel mechanisms.",
-    code: "SYS-04",
-  },
-  {
     icon: Trophy,
-    title: "COMPETITION",
-    detail: "Compete alongside top talent from premier engineering institutions nationwide.",
-    code: "SYS-05",
+    title: "₹15,000 PRIZE POOL",
+    detail: "Cash rewards: ₹7,000 for 1st place, ₹5,000 for 2nd, and ₹3,000 for 3rd place champions.",
+    code: "REWARD-01",
   },
   {
-    icon: Presentation,
-    title: "EXPOSITION",
-    detail: "Deliver high-impact technical demonstrations to esteemed faculty and jurors.",
-    code: "SYS-06",
+    icon: Briefcase,
+    title: "FAST-TRACK INTERNSHIP",
+    detail: "Winning team secures an exclusive fast-tracked corporate internship opportunity.",
+    code: "CAREER-02",
+  },
+  {
+    icon: FileCode,
+    title: "5 CORPORATE BRIEFS",
+    detail: "Solve real-world industrial engineering problem statements formulated by our partner company.",
+    code: "CHALLENGE-03",
+  },
+  {
+    icon: Users,
+    title: "FREE ENTRY (50 TEAMS)",
+    detail: "Zero registration fees; capped strictly at 50 teams of 3–4 students to ensure high competitiveness.",
+    code: "ACCESS-04",
+  },
+  {
+    icon: Layers,
+    title: "ANY PRESENTATION FORMAT",
+    detail: "Freedom to pitch via slide deck (PPT), poster display, or pure verbal pitch with visual aids.",
+    code: "PITCH-05",
+  },
+  {
+    icon: Award,
+    title: "INDUSTRY JURY & EXPO",
+    detail: "Direct live pitch evaluation and career networking with corporate engineering executives.",
+    code: "EXPO-06",
   },
 ];
 
@@ -63,8 +62,8 @@ export default function Highlights() {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-4">
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-              <ShinyText text="SYSTEM ARCHITECTURE" speed={4} />
+            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+              SYSTEM ARCHITECTURE
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-6xl font-black text-lab-cream tracking-tight">

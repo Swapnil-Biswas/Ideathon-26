@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Cpu, Target, Compass } from "lucide-react";
 import SpotlightCard from "../reactbits/SpotlightCard";
-import ShinyText from "../reactbits/ShinyText";
 
 export default function AboutARMS() {
   return (
@@ -18,8 +17,8 @@ export default function AboutARMS() {
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-4">
             <Cpu className="w-3.5 h-3.5 text-lab-orange" />
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-              <ShinyText text="ORGANIZING BODY" speed={4} />
+            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+              ORGANIZING BODY
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-6xl font-black text-lab-cream tracking-tight mb-3">

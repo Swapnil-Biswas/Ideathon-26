@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Clock, Activity, Flag } from "lucide-react";
 import { eventConfig } from "../../config/eventConfig";
-import ShinyText from "../reactbits/ShinyText";
 import SpotlightCard from "../reactbits/SpotlightCard";
 
 function getTimeLeft() {
@@ -52,8 +51,8 @@ export default function Countdown() {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-6"
         >
           <Clock className="w-4 h-4 text-lab-orange" />
-          <span className="font-mono text-xs tracking-[0.2em] uppercase text-lab-cream/80">
-            <ShinyText text="TEMPORAL SYNC • TIME REMAINING" speed={4} />
+          <span className="font-mono text-xs tracking-[0.2em] uppercase text-lab-cream/85">
+            TEMPORAL SYNC • TIME REMAINING
           </span>
         </motion.div>
 

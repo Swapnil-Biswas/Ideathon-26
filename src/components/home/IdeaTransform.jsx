@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Lightbulb, PenTool, Ruler, Wrench, Cpu } from "lucide-react";
-import ShinyText from "../reactbits/ShinyText";
 import SpotlightCard from "../reactbits/SpotlightCard";
 
 const stages = [
@@ -26,8 +25,8 @@ export default function IdeaTransform() {
 
       <div className="relative max-w-6xl mx-auto text-center mb-16">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-4">
-          <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-            <ShinyText text="FABRICATION PIPELINE" speed={4} />
+          <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+            FABRICATION PIPELINE
           </span>
         </div>
         <motion.h2

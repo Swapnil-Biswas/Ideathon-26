@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
-import { Sparkles, Cog, Palette, CheckCircle2, Presentation } from "lucide-react";
+import { Lightbulb, Sparkles, Target, Presentation } from "lucide-react";
 import SpotlightCard from "../reactbits/SpotlightCard";
-import ShinyText from "../reactbits/ShinyText";
 
 const criteria = [
-  { icon: Sparkles, label: "INNOVATION", weight: "25%", desc: "Originality and conceptual novelty of the robotics system." },
-  { icon: Cog, label: "TECHNICAL FEASIBILITY", weight: "25%", desc: "Engineering depth, circuit soundness, and component choices." },
-  { icon: Palette, label: "CREATIVITY", weight: "20%", desc: "Out-of-the-box thinking applied to real constraints." },
-  { icon: CheckCircle2, label: "FUNCTIONALITY", weight: "15%", desc: "Proof-of-concept prototype and testbed performance." },
-  { icon: Presentation, label: "PITCH & DEFENSE", weight: "15%", desc: "Clarity, technical articulation, and Q&A responsiveness." },
+  { icon: Target, label: "CLARITY & LOGICAL DEPTH", weight: "30%", desc: "Clear understanding of the problem statement and structured engineering thesis." },
+  { icon: Sparkles, label: "INNOVATION & NOVELTY", weight: "25%", desc: "Originality and creative breakthrough in the proposed engineering approach." },
+  { icon: Lightbulb, label: "FEASIBILITY & IMPACT", weight: "25%", desc: "Practical viability, technical feasibility, and real-world industrial impact." },
+  { icon: Presentation, label: "PITCH & JURY DEFENSE", weight: "20%", desc: "Persuasive delivery, effective communication, and articulation during Q&A." },
 ];
 
 export default function JudgingCriteria() {
@@ -24,8 +22,8 @@ export default function JudgingCriteria() {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-4">
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-              <ShinyText text="SCORING METRICS" speed={4} />
+            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+              SCORING METRICS
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-black text-lab-cream tracking-tight">

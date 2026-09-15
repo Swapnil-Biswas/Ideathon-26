@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { Calendar, MapPin, ShieldAlert, FileText } from "lucide-react";
 import { eventConfig } from "../../config/eventConfig";
-import ShinyText from "../reactbits/ShinyText";
-import DecryptedText from "../reactbits/DecryptedText";
 
 export default function GuidelinesHero() {
   return (
@@ -28,8 +26,8 @@ export default function GuidelinesHero() {
           className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-6"
         >
           <FileText className="w-3.5 h-3.5 text-lab-orange" />
-          <span className="font-mono text-xs tracking-widest text-lab-cream/80 uppercase">
-            <ShinyText text="OFFICIAL HANDBOOK • EVENT PROTOCOLS" speed={3.5} />
+          <span className="font-mono text-xs tracking-widest text-lab-cream/85 uppercase">
+            OFFICIAL HANDBOOK • EVENT PROTOCOLS
           </span>
         </motion.div>
 
@@ -39,15 +37,7 @@ export default function GuidelinesHero() {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="font-display text-4xl sm:text-6xl lg:text-7xl font-black text-lab-cream tracking-tight mb-6"
         >
-          RULEBOOK &{" "}
-          <span className="text-lab-orange">
-            <DecryptedText
-              text="GUIDELINES"
-              speed={40}
-              maxIterations={10}
-              animateOn="view"
-            />
-          </span>
+          RULEBOOK & <span className="text-lab-orange">GUIDELINES</span>
         </motion.h1>
 
         <motion.p
@@ -73,9 +63,8 @@ export default function GuidelinesHero() {
             <MapPin className="w-4 h-4 text-lab-orange" />
             <span>{eventConfig.venue}</span>
           </div>
-          <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-lab-charcoal/40 px-4 py-2 text-lab-cream/60">
-            <ShieldAlert className="w-4 h-4 text-lab-orange" />
-            <span>ARMS Mechatronics Standards</span>
+          <div className="flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-emerald-400 font-semibold">
+            <span>Free Entry • 50 Teams Capped</span>
           </div>
         </motion.div>
       </div>

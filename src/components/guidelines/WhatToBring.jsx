@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
-import { Laptop, Wrench, Cpu, BatteryCharging, Package } from "lucide-react";
+import { Laptop, Smartphone, FileSpreadsheet, IdCard, PenTool } from "lucide-react";
 import SpotlightCard from "../reactbits/SpotlightCard";
-import ShinyText from "../reactbits/ShinyText";
 
 const items = [
-  { icon: Laptop, label: "DEVELOPER RIGS", note: "Laptops, IDEs, drivers, and charging bricks" },
-  { icon: Wrench, label: "HARDWARE TOOLS", note: "Wire strippers, screwdrivers, pliers, and multimeter" },
-  { icon: Cpu, label: "CONTROLLERS", note: "Arduinos, ESP32s, Raspberry Pis, sensors, & breakout boards" },
-  { icon: BatteryCharging, label: "POWER PACKS", note: "LiPo batteries, power banks, 5V/12V adapters, and USB cables" },
-  { icon: Package, label: "CHASSIS & PARTS", note: "Casters, motors, wheels, brackets, and structural elements" },
+  { icon: Laptop, label: "LAPTOPS & CHARGERS", note: "At least 1-2 laptops per team for research, deck building, and design" },
+  { icon: Smartphone, label: "SMARTPHONES", note: "Charged phones to participate in Round 1 live web app play" },
+  { icon: IdCard, label: "COLLEGE PHOTO IDS", note: "Mandatory physical college student ID for all 3–4 team members at check-in" },
+  { icon: FileSpreadsheet, label: "PITCH DECKS / POSTERS", note: "Any format allowed: PPT slides, printed poster boards, or visual aids" },
+  { icon: PenTool, label: "SKETCHING KITS", note: "Pens, notebooks, or sketchpads for the intensive 2-hour ideation sprint" },
 ];
 
 export default function WhatToBring() {
@@ -22,8 +21,8 @@ export default function WhatToBring() {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-4">
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-              <ShinyText text="CHECKLIST" speed={4} />
+            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+              CHECKLIST
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-black text-lab-cream tracking-tight">

@@ -1,190 +1,131 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Zap } from "lucide-react";
+import { Terminal, Cpu, Play } from "lucide-react";
 
-const messages = [
-  "INVENTION PROTOCOL ACTIVATED.",
-  "BIG IDEA DETECTED.",
-  "BUILD THE IMPOSSIBLE.",
-  "FERB, GET THE TOOLS!",
-  "CONCEPTIA MODE: ON.",
-  "PERRY APPROVES.",
-];
-
-const sparkPositions = [
-  { x: -60, y: -40 }, { x: 60, y: -50 }, { x: -80, y: 20 },
-  { x: 80, y: 10 }, { x: 0, y: -70 }, { x: -30, y: 50 },
+const diagnosticProtocols = [
+  "PROTOCOL 01: DUAL-AXIS MECHATRONIC ACTUATION INITIALIZED",
+  "PROTOCOL 02: HIGH-TORQUE STEPPER MATRIX CALIBRATED",
+  "PROTOCOL 03: SUB-HERTZ LIDAR TELEMETRY VERIFIED",
+  "PROTOCOL 04: EDGE-COMPUTE TENSOR ENGINE SYNCHRONIZED",
+  "PROTOCOL 05: ULTRA-WIDEBAND TELEMETRY STREAM ACTIVE",
+  "PROTOCOL 06: MULTI-TIER SENSOR FUSION ONLINE: READY FOR FABRICATION",
 ];
 
 export default function InventionLab() {
   const [active, setActive] = useState(false);
-  const [message, setMessage] = useState("");
+  const [protocol, setProtocol] = useState(diagnosticProtocols[0]);
+  const [cycleCount, setCycleCount] = useState(1);
 
-  const handleActivate = () => {
+  const handleTrigger = () => {
     if (active) return;
-    const randomMsg = messages[Math.floor(Math.random() * messages.length)];
-    setMessage(randomMsg);
+    const nextIdx = Math.floor(Math.random() * diagnosticProtocols.length);
+    setProtocol(diagnosticProtocols[nextIdx]);
+    setCycleCount((prev) => prev + 1);
     setActive(true);
-    setTimeout(() => setActive(false), 4000);
+    setTimeout(() => setActive(false), 2500);
   };
 
   return (
     <section className="relative bg-lab-charcoal py-28 px-6 overflow-hidden">
-      {/* Background silhouette animation — REQUIRES phineas-ferb-silhouette.mp4 in public/assets/ */}
+      {/* Background video with deep atmospheric blend */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-40"
+        className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none"
       >
         <source src="/assets/phineas-ferb-silhouette.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-lab-charcoal/60" />
+      <div className="absolute inset-0 bg-lab-charcoal/80 pointer-events-none" />
 
-      <div className="relative max-w-4xl mx-auto text-center">
-        <p className="text-lab-orange text-sm tracking-[0.25em] font-medium mb-3">
-          THE INVENTION LAB
+      {/* Blueprint grid background */}
+      <div
+        className="absolute inset-0 opacity-[0.035] pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(#f2792a 1px, transparent 1px), linear-gradient(90deg, #f2792a 1px, transparent 1px)",
+          backgroundSize: "44px 44px",
+        }}
+      />
+
+      <div className="relative max-w-4xl mx-auto text-center z-10">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lab-black border border-lab-orange/30 backdrop-blur-md mb-4">
+          <Terminal className="w-3.5 h-3.5 text-lab-orange" />
+          <span className="font-oxanium text-xs tracking-[0.22em] text-lab-cream/85 uppercase">
+            THE INVENTION LAB
+          </span>
+        </div>
+
+        <h2 className="font-oxanium text-3xl sm:text-5xl font-black text-lab-cream tracking-wide uppercase mb-4">
+          FERB, I KNOW WHAT <br />
+          WE'RE GONNA <span className="text-lab-orange">BUILD.</span>
+        </h2>
+
+        <p className="text-lab-cream/70 text-sm sm:text-base max-w-xl mx-auto mb-10 font-body">
+          Interactive testbench console for testing algorithmic sequences and mechatronics logic prior to hardware prototyping.
         </p>
-        <div className="relative inline-block">
-          <h2 className="font-display text-4xl sm:text-5xl font-bold text-lab-cream mb-4">
-            FERB, I KNOW WHAT<br />WE'RE GONNA <span className="text-lab-orange">BUILD!</span>
-          </h2>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.7, rotate: -10 }}
-            whileInView={{ opacity: 1, scale: 1, rotate: -8 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-            className="hidden sm:block absolute -right-16 -top-6 bg-lab-orange text-lab-black text-xs font-bold px-3 py-1.5 rounded-full comic-border border-lab-black"
-          >
-            <span className="inline-flex items-center gap-1">
-              LET'S GO! <Zap size={12} fill="currentColor" />
+
+        {/* Console Box */}
+        <div className="relative bg-lab-black/90 border border-lab-orange/35 rounded-2xl p-8 sm:p-12 shadow-2xl backdrop-blur-md overflow-hidden text-left">
+          {/* Corner HUD accents */}
+          <div className="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-lab-orange" />
+          <div className="absolute top-0 right-0 w-3.5 h-3.5 border-t-2 border-r-2 border-lab-orange" />
+          <div className="absolute bottom-0 left-0 w-3.5 h-3.5 border-b-2 border-l-2 border-lab-orange" />
+          <div className="absolute bottom-0 right-0 w-3.5 h-3.5 border-b-2 border-r-2 border-lab-orange" />
+
+          {/* Console Header */}
+          <div className="flex flex-wrap items-center justify-between pb-4 mb-6 border-b border-white/10 gap-3">
+            <div className="flex items-center gap-2.5">
+              <Cpu className="w-4 h-4 text-lab-orange" />
+              <span className="font-mono text-xs font-semibold tracking-wider text-lab-cream/90">
+                PROTOTYPE TELEMETRY BENCH // CYCLE #{String(cycleCount).padStart(3, "0")}
+              </span>
+            </div>
+            <span className="text-[11px] font-mono text-lab-cream/40 tracking-widest">
+              BMSIT-ARMS-LAB-01
             </span>
-          </motion.div>
-        </div>
-
-        {/* Machine panel */}
-        <div className="relative mt-14 bg-lab-black border-2 border-lab-orange/30 rounded-2xl p-10 sm:p-14 overflow-hidden">
-          <svg
-            className="absolute inset-0 w-full h-full opacity-20"
-            viewBox="0 0 400 200"
-            preserveAspectRatio="none"
-          >
-            <motion.path
-              d="M20 100 H150 V40 H280"
-              stroke="#f2792a"
-              strokeWidth="1.5"
-              fill="none"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: active ? 1 : 0.3 }}
-              transition={{ duration: 1.2 }}
-            />
-            <motion.path
-              d="M20 150 H100 V180 H380"
-              stroke="#f2792a"
-              strokeWidth="1.5"
-              fill="none"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: active ? 1 : 0.2 }}
-              transition={{ duration: 1.4 }}
-            />
-          </svg>
-
-          <div className="relative flex justify-center gap-3 mb-8">
-            {[...Array(5)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="w-3 h-3 rounded-full bg-lab-orange"
-                animate={{
-                  opacity: active ? [0.3, 1, 0.3] : 0.25,
-                  boxShadow: active
-                    ? "0 0 12px 2px rgba(242,121,42,0.8)"
-                    : "0 0 0px 0px rgba(242,121,42,0)",
-                }}
-                transition={{
-                  repeat: active ? Infinity : 0,
-                  duration: 1,
-                  delay: i * 0.15,
-                }}
-              />
-            ))}
           </div>
 
-          <motion.svg
-            className="relative mx-auto w-20 h-20 text-lab-orange mb-8"
-            viewBox="0 0 100 100"
-            fill="none"
-            animate={{ rotate: active ? 360 : 0 }}
-            transition={{ duration: 2, repeat: active ? Infinity : 0, ease: "linear" }}
-          >
-            <circle cx="50" cy="50" r="28" stroke="currentColor" strokeWidth="2" />
-            <circle cx="50" cy="50" r="8" stroke="currentColor" strokeWidth="2" />
-            {[...Array(8)].map((_, i) => (
-              <rect
-                key={i}
-                x="47"
-                y="12"
-                width="6"
-                height="12"
-                fill="currentColor"
-                transform={`rotate(${(i * 360) / 8} 50 50)`}
-              />
-            ))}
-          </motion.svg>
-
-          <p className="text-lab-cream/40 text-xs tracking-widest mb-6">
-            {active ? (
-              <span className="text-lab-orange">● SYSTEM ONLINE</span>
-            ) : (
-              "○ SYSTEM STANDBY"
-            )}
-          </p>
-
-          <motion.button
-            onClick={handleActivate}
-            whileHover={!active ? { scale: 1.06, rotate: -1 } : {}}
-            whileTap={!active ? { scale: 0.92, rotate: 2 } : {}}
-            transition={{ type: "spring", stiffness: 400, damping: 12 }}
-            disabled={active}
-            className="relative px-8 py-4 bg-lab-orange text-lab-black font-bold tracking-widest rounded-full hover:bg-lab-glow disabled:opacity-70"
-          >
-            <span className="flex items-center gap-2">
-              <Zap size={18} fill="currentColor" /> ACTIVATE INVENTION
-            </span>
-          </motion.button>
-
-          <div className="h-10 mt-6">
-            <AnimatePresence mode="wait">
-              {active && (
-                <motion.p
-                  key={message}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="text-lab-orange font-display font-bold tracking-wide text-sm sm:text-base"
-                >
-                  {message}
-                </motion.p>
-              )}
-            </AnimatePresence>
-          </div>
-          {/* Spark burst on activation */}
-          <AnimatePresence>
-            {active &&
-              sparkPositions.map((pos, i) => (
+          {/* Code Terminal Output Window */}
+          <div className="bg-black/60 rounded-xl p-5 sm:p-6 border border-white/[0.06] mb-6 font-mono text-xs sm:text-sm">
+            <div className="flex items-center gap-2 text-lab-cream/40 text-[11px] mb-3">
+              <span>HOST: arm-kernel-v4</span>
+              <span>•</span>
+              <span>ARCH: ARM64-RTOS</span>
+            </div>
+            <div className="text-lab-cream/80 min-h-[48px] flex items-center">
+              <AnimatePresence mode="wait">
                 <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: 0, y: 0, scale: 0 }}
-                  animate={{ opacity: [1, 0], x: pos.x, y: pos.y, scale: 1 }}
-                  transition={{ duration: 0.6, delay: 0.1 + i * 0.03 }}
-                  className="absolute left-1/2 top-1/2 w-2 h-2 rounded-full bg-lab-orange pointer-events-none"
-                />
-              ))}
-          </AnimatePresence>
-         
-        </div>
+                  key={protocol}
+                  initial={{ opacity: 0, y: 4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -4 }}
+                  transition={{ duration: 0.2 }}
+                  className="text-lab-orange font-mono font-medium tracking-wide"
+                >
+                  &gt; {protocol}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
 
-        
+          {/* Console Actions */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+            <div className="text-xs font-mono text-lab-cream/50 tracking-wider">
+              STATUS: {active ? "PROCESSING DIAGNOSTIC" : "STANDBY READY"}
+            </div>
+
+            <button
+              onClick={handleTrigger}
+              disabled={active}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-lab-orange text-lab-black font-oxanium text-xs font-bold tracking-widest uppercase hover:bg-lab-glow transition-all duration-200 disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed"
+            >
+              <Play className="w-3.5 h-3.5 fill-current" />
+              <span>{active ? "SIMULATING..." : "EXECUTE DIAGNOSTIC"}</span>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );

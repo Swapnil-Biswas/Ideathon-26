@@ -1,36 +1,35 @@
 import { motion } from "framer-motion";
 import { Lightbulb, Zap, Hammer, Trophy } from "lucide-react";
-import ShinyText from "../reactbits/ShinyText";
 import SpotlightCard from "../reactbits/SpotlightCard";
 
 const journey = [
   {
     num: "01",
     icon: Lightbulb,
-    title: "IDEATE",
-    desc: "Formulate your problem statement, target persona, and innovative solution thesis.",
-    tag: "DISCOVERY PHASE"
+    title: "DIGITAL FILTER",
+    desc: "Rapid-fire 'This or That' online quiz testing instincts; the leaderboard reveals the top 20 contenders.",
+    tag: "ROUND 01 • FILTER"
   },
   {
     num: "02",
     icon: Zap,
-    title: "INNOVATE",
-    desc: "Architect hardware schematics, pinout designs, and software algorithmic logic.",
-    tag: "ARCHITECTURE"
+    title: "RAPID PITCH",
+    desc: "Top 20 teams deliver 90-second speed pitches on the main stage, alongside unrevealed surprise wildcard chances.",
+    tag: "ROUND 02 • SPEED"
   },
   {
     num: "03",
     icon: Hammer,
-    title: "BUILD",
-    desc: "Rapid prototyping sprint: assemble circuits, flash code, calibrate sensors, and iterate.",
-    tag: "PROTOTYPING"
+    title: "IDEATION SPRINT",
+    desc: "14 finalists receive 5 real corporate problem statements for an intensive 2-hour solution design block.",
+    tag: "ROUND 03 • 2-HR BLOCK"
   },
   {
     num: "04",
     icon: Trophy,
-    title: "WIN",
-    desc: "Pitch live demonstration before the panel of veteran judges and mechatronics faculty.",
-    tag: "CHAMPIONSHIP"
+    title: "JURY DEFENSE",
+    desc: "5-minute final pitch to corporate judges for the ₹15,000 prize pool and fast-track internship offers.",
+    tag: "FINALS • ₹15K PRIZES"
   },
 ];
 
@@ -60,8 +59,8 @@ export default function JourneySteps() {
           className="text-center mb-20"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-black border border-lab-orange/30 backdrop-blur-md mb-4">
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-              <ShinyText text="THE ROADMAP" speed={4} />
+            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+              THE ROADMAP
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-6xl font-black text-lab-cream tracking-tight">

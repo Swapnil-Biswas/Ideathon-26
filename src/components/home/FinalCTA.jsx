@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles, Terminal } from "lucide-react";
 import RegisterButton from "../shared/RegisterButton";
-import ShinyText from "../reactbits/ShinyText";
 
 export default function FinalCTA() {
   return (
@@ -61,7 +60,7 @@ export default function FinalCTA() {
           transition={{ delay: 0.2 }}
           className="font-mono text-xl sm:text-2xl tracking-[0.2em] font-bold text-lab-cream/90 mb-2 uppercase"
         >
-          <ShinyText text="BUILD THE IMPOSSIBLE." speed={3} />
+          BUILD THE IMPOSSIBLE.
         </motion.p>
 
         <motion.p
@@ -69,9 +68,9 @@ export default function FinalCTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="text-lab-cream/50 text-xs font-mono tracking-[0.3em] mb-10 uppercase"
+          className="text-lab-cream/60 text-xs font-mono tracking-[0.25em] mb-10 uppercase"
         >
-          CONCEPTIA '26 • BMSIT&M BENGALURU
+          14TH OCTOBER 2026 • BMSIT&amp;M BENGALURU • ₹15,000 PRIZE POOL • 50 TEAMS CAPPED
         </motion.p>
 
         <motion.div
@@ -81,7 +80,7 @@ export default function FinalCTA() {
           transition={{ delay: 0.4 }}
           className="flex justify-center"
         >
-          <RegisterButton label="REGISTER ON UNSTOP" size="lg" />
+          <RegisterButton label="REGISTER ON UNSTOP (FREE)" size="lg" />
         </motion.div>
 
         <motion.div
@@ -92,7 +91,7 @@ export default function FinalCTA() {
           className="flex items-center justify-center gap-2 text-lab-cream/50 text-xs font-mono tracking-wider mt-8"
         >
           <Sparkles className="w-3.5 h-3.5 text-lab-orange" />
-          <span>Your idea could be the next championship build.</span>
+          <span>Free entry for 3–4 member teams. Winning team secures ₹7,000 + corporate internship opportunity.</span>
         </motion.div>
       </div>
     </section>

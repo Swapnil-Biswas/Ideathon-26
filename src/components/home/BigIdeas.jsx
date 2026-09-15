@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Bot, Cpu, Layers } from "lucide-react";
-import ShinyText from "../reactbits/ShinyText";
 import SpotlightCard from "../reactbits/SpotlightCard";
 
 export default function BigIdeas() {
@@ -46,9 +45,9 @@ export default function BigIdeas() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-4"
           >
-            <span className="w-2 h-2 rounded-full bg-lab-orange animate-pulse" />
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80">
-              <ShinyText text="SYSTEM STATUS: OPERATIONAL" speed={4} />
+            <span className="w-1.5 h-1.5 rounded-full bg-lab-orange" />
+            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+              HARDWARE DOMAINS
             </span>
           </motion.div>
 

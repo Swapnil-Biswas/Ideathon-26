@@ -1,33 +1,37 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Shield } from "lucide-react";
-import ShinyText from "../reactbits/ShinyText";
 
 const rules = [
   {
     num: "01",
-    title: "TEAM COMPOSITION & ELIGIBILITY",
-    content: "Each team must consist of 2 to 4 currently enrolled college students. All participants must present legitimate institutional photo identification during check-in. Inter-college and inter-branch teams are allowed.",
+    title: "TEAM COMPOSITION & FREE REGISTRATION",
+    content: "Each team must consist of 3 to 4 currently enrolled undergraduate or postgraduate students. Registrations are strictly capped at 50 teams on a first-come, first-served basis with zero registration fee. Valid physical college student IDs are mandatory during morning check-in.",
   },
   {
     num: "02",
-    title: "ORIGINALITY & INTELLECTUAL PROPERTY",
-    content: "All design work, circuit schematics, and prototype code developed during the sprint must be original. Pre-existing open-source libraries and standard reference designs are allowed provided proper attribution is made.",
+    title: "EVENT TIMELINE & THREE-ROUND STRUCTURE",
+    content: "CONCEPTIA '26 is an intensive one-day ideathon held on 14th October 2026 (9:00 AM – 4:25 PM) at the BMSIT&M campus. The event progresses through three stages: Round 1 digital filter challenge, Round 2 rapid stage pitches, and Round 3 corporate ideathon sprint.",
   },
   {
     num: "03",
-    title: "LAB SAFETY & EQUIPMENT USAGE",
-    content: "Standard electrical and mechanical safety rules must be strictly adhered to. Workspaces with soldering stations, high-current power supplies, or sharp hand tools must be operated responsibly with eye protection where necessary.",
+    title: "5 CORPORATE PROBLEM STATEMENTS",
+    content: "During Round 3, 5 authentic real-world engineering problem statements provided by our corporate industry partner will be revealed to the 14 finalist teams. Teams enter an intensive 2-hour ideation block to formulate high-impact solutions.",
   },
   {
     num: "04",
-    title: "SUBMISSION DELIVERABLES",
-    content: "Teams must submit: (1) System Architecture schematic / CAD render, (2) Functional hardware or embedded firmware demo, and (3) A 5-slide technical pitch deck summarizing value proposition, novelty, and test results.",
+    title: "ANY PRESENTATION FORMAT WELCOME",
+    content: "Teams have complete creative freedom to present their solutions in whichever format showcases their idea best: slide deck (PPT), physical poster board, or verbal defense with visual aids. Evaluation centers on clarity of thought and strength of the solution.",
   },
   {
     num: "05",
-    title: "CODE OF CONDUCT & JURY DECISION",
-    content: "Fair play, sportsmanship, and professional decorum are paramount. Any form of plagiarism or hardware tampering will result in immediate disqualification. The jury panel's scoring decisions are final and binding.",
+    title: "₹15,000 PRIZE POOL & FAST-TRACK INTERNSHIP",
+    content: "The ₹15,000 total prize pool is awarded as: 1st Prize ₹7,000, 2nd Prize ₹5,000, and 3rd Prize ₹3,000. Additionally, members of the 1st prize winning team secure fast-tracked corporate internship opportunities with our industry partner. All jury decisions are final.",
+  },
+  {
+    num: "06",
+    title: "SURPRISE WILDCARD REDEMPTION",
+    content: "Eliminated in the opening rounds? Don't pack up. Unannounced surprise wildcard redemption challenges will be unveiled live on event day, giving determined teams an exciting chance to claw their way back into the 14 finalist slots!",
   },
 ];
 
@@ -47,8 +51,8 @@ export default function RulesAccordion() {
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-black border border-lab-orange/30 backdrop-blur-md mb-4">
             <Shield className="w-3.5 h-3.5 text-lab-orange" />
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-              <ShinyText text="CODE OF CONDUCT" speed={4} />
+            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+              CODE OF CONDUCT
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-black text-lab-cream tracking-tight">

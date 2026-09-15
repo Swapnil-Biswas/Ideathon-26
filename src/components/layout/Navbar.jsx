@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Cpu } from "lucide-react";
 import RegisterButton from "../shared/RegisterButton";
-import ShinyText from "../reactbits/ShinyText";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +38,7 @@ export default function Navbar() {
               ARMS
             </span>
             <span className="text-[10px] font-mono tracking-widest text-lab-cream/50 uppercase mt-0.5">
-              <ShinyText text="CONCEPTIA '26" speed={3} className="text-[10px]" />
+              CONCEPTIA '26
             </span>
           </div>
         </Link>

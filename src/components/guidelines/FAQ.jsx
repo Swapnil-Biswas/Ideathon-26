@@ -1,36 +1,39 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
-import ShinyText from "../reactbits/ShinyText";
 
 const faqs = [
   {
-    q: "Who can participate in CONCEPTIA '26?",
-    a: "Undergraduate and postgraduate students enrolled in recognized engineering or technical universities are eligible. Inter-college and inter-branch teams are enthusiastically welcomed.",
+    q: "When and where is CONCEPTIA '26 taking place?",
+    a: "CONCEPTIA '26 is a one-day in-person ideathon taking place on 14th October 2026 (9:00 AM – 4:25 PM) at the BMSIT&M campus in Bengaluru.",
   },
   {
-    q: "What is the team size limit?",
-    a: "Teams must consist of 2 to 4 members. Solo entries are not permitted to encourage collaborative engineering and hardware prototyping.",
-  },
-  {
-    q: "Can students from different branches form a team?",
-    a: "Yes, cross-disciplinary teams (e.g. Mechatronics, Computer Science, Electronics, Mechanical) are highly encouraged because robotics systems require both hardware and software expertise.",
-  },
-  {
-    q: "Where do we register and submit our proposal?",
-    a: "Registration is hosted exclusively on the official Unstop platform. Click the 'REGISTER' specular button on the site to access the direct competition portal.",
-  },
-  {
-    q: "What hardware should teams bring?",
-    a: "Bring laptops, microcontrollers (Arduino, ESP32, STM32, Raspberry Pi), basic sensors, actuators, and power supplies. High-speed Wi-Fi, soldering stations, and workspace power will be provided.",
+    q: "What is the team size and participation cap?",
+    a: "Teams must consist of 3 to 4 members. Registrations are strictly capped at 50 teams on a first-come, first-served basis.",
   },
   {
     q: "Is there any registration fee?",
-    a: "Please refer to the Unstop registration portal for the latest fee details, inclusions, refreshments, and official hacker kits.",
+    a: "No! Registration for CONCEPTIA '26 is completely FREE. Refreshments and official event materials are provided.",
   },
   {
-    q: "Who can we contact for technical support or travel queries?",
-    a: "You can reach out to the ARMS organizing committee via instagram (@arms.bmsit) or through the coordinators listed on the Unstop portal.",
+    q: "Can students from different branches or colleges collaborate?",
+    a: "Yes! Inter-disciplinary (e.g. Mechatronics, CS, Electronics, Mechanical) and cross-college engineering teams are actively encouraged.",
+  },
+  {
+    q: "What are the competition rounds?",
+    a: "The event features three rounds: (1) Round 1 Digital Filter 'This or That' rapid-fire quiz, (2) Round 2 Rapid Pitches on the main stage, and (3) Round 3 Corporate Ideathon Sprint where 14 finalist teams solve 5 partner company problem statements.",
+  },
+  {
+    q: "In what format can teams present their solutions?",
+    a: "Teams have complete presentation freedom: a slide deck (PPT), a poster display, or a verbal pitch with visual aids. The judges evaluate clarity of thought and strength of the idea, not presentation medium.",
+  },
+  {
+    q: "What are the prizes and career incentives?",
+    a: "A total cash prize pool of ₹15,000 (1st: ₹7,000, 2nd: ₹5,000, 3rd: ₹3,000) plus an exclusive fast-tracked corporate internship opportunity for the 1st place winning team.",
+  },
+  {
+    q: "What happens if a team gets eliminated early?",
+    a: "Stay tuned! Unannounced surprise wildcard redemption challenges will take place on event day to give eliminated teams an exciting chance to claw their way back into the finals.",
   },
 ];
 
@@ -49,8 +52,8 @@ export default function FAQ() {
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-4">
             <HelpCircle className="w-3.5 h-3.5 text-lab-orange" />
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-              <ShinyText text="KNOWLEDGE BASE" speed={4} />
+            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+              KNOWLEDGE BASE
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-black text-lab-cream tracking-tight">

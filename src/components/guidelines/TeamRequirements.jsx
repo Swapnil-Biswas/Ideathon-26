@@ -2,35 +2,34 @@ import { motion } from "framer-motion";
 import { Users, ShieldCheck, Globe, MapPin } from "lucide-react";
 import { eventConfig } from "../../config/eventConfig";
 import SpotlightCard from "../reactbits/SpotlightCard";
-import ShinyText from "../reactbits/ShinyText";
 
 const specs = [
   {
     icon: Users,
     label: "TEAM COMPOSITION",
-    value: "2 to 4 Members",
-    subtext: "Inter-disciplinary & cross-college teams permitted",
+    value: "3 to 4 Members",
+    subtext: "Strictly 3–4 members per team; cross-branch & cross-college allowed",
     code: "REQ-01"
   },
   {
     icon: ShieldCheck,
-    label: "PARTICIPANT ELIGIBILITY",
-    value: "UG & PG Engineering Students",
-    subtext: "Valid college ID required during check-in",
+    label: "PARTICIPANT CAP",
+    value: "50 Teams Capped",
+    subtext: "Limited to 50 teams on first-come basis via Unstop",
     code: "REQ-02"
   },
   {
     icon: Globe,
-    label: "REGISTRATION PORTAL",
-    value: "Official Unstop Platform",
-    subtext: "Instant confirmation and team dashboard",
+    label: "REGISTRATION FEE",
+    value: "100% Free (No Fee)",
+    subtext: "Zero entry fee; refreshments & kits provided",
     code: "REQ-03"
   },
   {
     icon: MapPin,
     label: "ON-CAMPUS VENUE",
     value: eventConfig.venue,
-    subtext: "Dedicated laboratory & testing arena",
+    subtext: "BMSIT&M Bengaluru • 14th October 2026 (One-day event)",
     code: "REQ-04"
   },
 ];
@@ -46,8 +45,8 @@ export default function TeamRequirements() {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-black border border-lab-orange/30 backdrop-blur-md mb-4">
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-              <ShinyText text="SPECIFICATIONS" speed={4} />
+            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+              SPECIFICATIONS
             </span>
           </div>
           <h2 className="font-display text-4xl sm:text-5xl font-black text-lab-cream tracking-tight">

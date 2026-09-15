@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Shuffle, Sparkles, Wand2 } from "lucide-react";
-import ShinyText from "../reactbits/ShinyText";
 import SpotlightCard from "../reactbits/SpotlightCard";
 
 const words1 = ["Autonomous", "Swarm", "Edge AI", "Computer Vision", "Teleoperated", "Bipedal", "Sensor Fusion"];
@@ -26,8 +25,8 @@ export default function IdeaGenerator() {
       <div className="relative max-w-3xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-4">
           <Wand2 className="w-3.5 h-3.5 text-lab-orange" />
-          <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/80 uppercase">
-            <ShinyText text="IDEATION MATRIX" speed={4} />
+          <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
+            IDEATION MATRIX
           </span>
         </div>
 
