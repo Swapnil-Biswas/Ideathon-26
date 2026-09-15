@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, MapPin, ShieldAlert, FileText } from "lucide-react";
+import { Calendar, MapPin, FileText } from "lucide-react";
 import { eventConfig } from "../../config/eventConfig";
 
 export default function GuidelinesHero() {

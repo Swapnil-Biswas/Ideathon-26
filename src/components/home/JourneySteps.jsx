@@ -56,17 +56,21 @@ export default function JourneySteps() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-16 sm:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-black border border-lab-orange/30 backdrop-blur-md mb-4">
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
-              THE ROADMAP
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-black/80 border border-lab-orange/40 backdrop-blur-md mb-4 shadow-lg">
+            <span className="w-1.5 h-1.5 rounded-full bg-lab-orange animate-pulse" />
+            <span className="font-oxanium text-xs tracking-[0.25em] text-lab-cream font-bold uppercase">
+              THE ROADMAP // 4 STAGES
             </span>
           </div>
-          <h2 className="font-display text-4xl sm:text-6xl font-black text-lab-cream tracking-tight">
-            FOUR STAGES. <span className="text-lab-orange">ONE BUILD.</span>
+          <h2 className="font-oxanium text-4xl sm:text-6xl font-black text-lab-cream tracking-[0.02em] uppercase">
+            FOUR STAGES.{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-lab-orange to-orange-500 filter drop-shadow-[0_0_25px_rgba(242,121,42,0.4)]">
+              ONE BUILD.
+            </span>
           </h2>
-          <p className="text-lab-cream/60 font-mono text-sm max-w-md mx-auto mt-3">
+          <p className="text-lab-cream/70 font-rajdhani font-semibold text-sm sm:text-base tracking-[0.18em] uppercase max-w-lg mx-auto mt-3">
             FROM BLANK CANVAS TO FUNCTIONAL ROBOTIC HARDWARE
           </p>
         </motion.div>
@@ -82,34 +86,35 @@ export default function JourneySteps() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ delay: i * 0.12, duration: 0.5 }}
+                className="group"
               >
                 <SpotlightCard
                   spotlightColor="rgba(242, 121, 42, 0.25)"
-                  className="h-full p-6 bg-lab-black/60 border-white/[0.08] hover:border-lab-orange/40 flex flex-col justify-between"
+                  className="relative h-full p-6 bg-lab-black/75 border-white/[0.08] hover:border-lab-orange/50 flex flex-col justify-between rounded-2xl backdrop-blur-xl transition-all duration-300"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-6">
-                      <div className="w-12 h-12 rounded-xl bg-lab-charcoal border border-lab-orange/30 flex items-center justify-center text-lab-orange shadow-lg shadow-lab-orange/10">
+                      <div className="w-12 h-12 rounded-xl bg-lab-charcoal border border-lab-orange/30 flex items-center justify-center text-lab-orange shadow-lg shadow-lab-orange/10 group-hover:border-lab-orange group-hover:scale-105 transition-all">
                         <Icon size={22} />
                       </div>
-                      <span className="font-mono font-bold text-2xl text-lab-orange/40">
+                      <span className="font-oxanium font-bold text-2xl text-lab-orange/40 group-hover:text-lab-orange transition-colors">
                         {step.num}
                       </span>
                     </div>
 
-                    <h3 className="font-display font-bold text-xl text-lab-cream mb-2 tracking-wide">
+                    <h3 className="font-oxanium font-bold text-lg sm:text-xl text-lab-cream mb-2 tracking-wide group-hover:text-amber-300 transition-colors">
                       {step.title}
                     </h3>
-                    <p className="text-lab-cream/70 text-xs leading-relaxed mb-6">
+                    <p className="text-lab-cream/70 text-xs leading-relaxed mb-6 font-body">
                       {step.desc}
                     </p>
                   </div>
 
                   <div className="pt-3 border-t border-white/[0.06] flex items-center justify-between">
-                    <span className="font-mono text-[10px] tracking-widest text-lab-orange uppercase">
+                    <span className="font-rajdhani font-bold text-xs tracking-widest text-lab-orange uppercase">
                       {step.tag}
                     </span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-lab-orange" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-lab-orange group-hover:animate-ping" />
                   </div>
                 </SpotlightCard>
               </motion.div>

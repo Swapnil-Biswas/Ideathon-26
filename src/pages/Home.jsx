@@ -11,15 +11,33 @@ import FinalCTA from "../components/home/FinalCTA";
 export default function Home() {
   return (
     <>
-      <HeroSection />
-      <WhatToday />
-      <BigIdeas />
-      <JourneySteps />
-      <Highlights />
-      <Countdown />
-      <AboutARMS />
-      <PosterSection />
-      <FinalCTA />
+      <div id="hero">
+        <HeroSection />
+      </div>
+      <div id="overview">
+        <WhatToday />
+      </div>
+      <div id="domains">
+        <BigIdeas />
+      </div>
+      <div id="roadmap">
+        <JourneySteps />
+      </div>
+      <div id="highlights">
+        <Highlights />
+      </div>
+      <div id="schedule">
+        <Countdown />
+      </div>
+      <div id="about">
+        <AboutARMS />
+      </div>
+      <div id="poster">
+        <PosterSection />
+      </div>
+      <div id="register">
+        <FinalCTA />
+      </div>
     </>
   );
 }

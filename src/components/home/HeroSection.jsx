@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import { ArrowDown, Calendar, MapPin, Sparkles } from "lucide-react";
+import { useRef, useEffect } from "react";
+import { ArrowDown, Calendar, MapPin } from "lucide-react";
 import { eventConfig } from "../../config/eventConfig";
 import RegisterButton from "../shared/RegisterButton";
 

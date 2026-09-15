@@ -114,12 +114,6 @@ export default function WhatToday() {
             className="lg:col-span-5"
           >
             <div className="relative rounded-2xl border border-lab-orange/30 bg-lab-charcoal/85 backdrop-blur-xl shadow-xl p-6 sm:p-8 overflow-hidden">
-              {/* Corner HUD accents */}
-              <div className="absolute top-0 left-0 w-3.5 h-3.5 border-t-2 border-l-2 border-lab-orange" />
-              <div className="absolute top-0 right-0 w-3.5 h-3.5 border-t-2 border-r-2 border-lab-orange" />
-              <div className="absolute bottom-0 left-0 w-3.5 h-3.5 border-b-2 border-l-2 border-lab-orange" />
-              <div className="absolute bottom-0 right-0 w-3.5 h-3.5 border-b-2 border-r-2 border-lab-orange" />
-
               {/* Terminal Header */}
               <div className="flex items-center justify-between pb-5 mb-6 border-b border-white/[0.08]">
                 <div className="flex items-center gap-3">
