@@ -1,117 +1,208 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, HelpCircle } from "lucide-react";
+import { ChevronDown, HelpCircle, Home } from "lucide-react";
+import { Link } from "react-router-dom";
+import RegisterButton from "../shared/RegisterButton";
 
 const faqs = [
   {
+    category: "GENERAL",
     q: "When and where is CONCEPTIA '26 taking place?",
-    a: "CONCEPTIA '26 is a one-day in-person ideathon taking place on 14th October 2026 (9:00 AM – 4:25 PM) at the BMSIT&M campus in Bengaluru.",
+    a: "CONCEPTIA '26 is an in-person one-day ideathon taking place on 14th October 2026 (9:00 AM – 4:25 PM) at the BMSIT&M campus in Yelahanka, Bengaluru.",
   },
   {
-    q: "What is the team size and participation cap?",
-    a: "Teams must consist of 3 to 4 members. Registrations are strictly capped at 50 teams on a first-come, first-served basis.",
+    category: "REGISTRATION",
+    q: "What is the team size and participant cap?",
+    a: "Teams must consist of strictly 3 to 4 members. Total participation is capped at 50 teams on a first-come, first-served basis via Unstop.",
   },
   {
+    category: "REGISTRATION",
     q: "Is there any registration fee?",
-    a: "No! Registration for CONCEPTIA '26 is completely FREE. Refreshments and official event materials are provided.",
+    a: "No! Entry for CONCEPTIA '26 is completely FREE. Morning refreshments, campus lunch, and official participant stationery are provided.",
   },
   {
+    category: "ELIGIBILITY",
     q: "Can students from different branches or colleges collaborate?",
-    a: "Yes! Inter-disciplinary (e.g. Mechatronics, CS, Electronics, Mechanical) and cross-college engineering teams are actively encouraged.",
+    a: "Yes! Cross-departmental (e.g. Mechatronics, CS, AI/ML, ECE, Mechanical) and inter-college engineering teams are warmly welcomed and encouraged.",
   },
   {
-    q: "What are the competition rounds?",
-    a: "The event features three rounds: (1) Round 1 Digital Filter 'This or That' rapid-fire quiz, (2) Round 2 Rapid Pitches on the main stage, and (3) Round 3 Corporate Ideathon Sprint where 14 finalist teams solve 5 partner company problem statements.",
+    category: "ROUNDS",
+    q: "What is the tournament round structure?",
+    a: "The event progresses across three rounds: (1) Round 1 Digital Filter 'This or That' quiz, (2) Round 2 Rapid Stage Pitches, and (3) Round 3 Corporate Ideathon Sprint where 14 finalist teams solve 5 partner industry problem statements.",
   },
   {
+    category: "FORMAT",
     q: "In what format can teams present their solutions?",
-    a: "Teams have complete presentation freedom: a slide deck (PPT), a poster display, or a verbal pitch with visual aids. The judges evaluate clarity of thought and strength of the idea, not presentation medium.",
+    a: "Teams have complete creative presentation freedom: a slide deck (PPT / Canva / Figma), a printed poster board, or an oral defense with visual props. Corporate judges evaluate clarity of thought and technical feasibility.",
   },
   {
+    category: "PRIZES",
     q: "What are the prizes and career incentives?",
-    a: "A total cash prize pool of ₹15,000 (1st: ₹7,000, 2nd: ₹5,000, 3rd: ₹3,000) plus an exclusive fast-tracked corporate internship opportunity for the 1st place winning team.",
+    a: "A total cash prize pool of ₹15,000 (1st: ₹7,000, 2nd: ₹5,000, 3rd: ₹3,000) plus fast-tracked corporate internship opportunities with our industry partner for the 1st prize winning team.",
   },
   {
-    q: "What happens if a team gets eliminated early?",
-    a: "Stay tuned! Unannounced surprise wildcard redemption challenges will take place on event day to give eliminated teams an exciting chance to claw their way back into the finals.",
+    category: "WILDCARD",
+    q: "What happens if our team gets eliminated in preliminary rounds?",
+    a: "Do not leave early! Unannounced surprise wildcard redemption challenges will take place live on event day, giving eliminated teams a legitimate chance to fight back into the 14 finalist positions.",
   },
 ];
 
+const faqCategories = ["ALL", "REGISTRATION", "ROUNDS", "PRIZES & WILDCARD"];
+
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
+  const [selectedCat, setSelectedCat] = useState("ALL");
+
+  const filteredFaqs = selectedCat === "ALL"
+    ? faqs
+    : selectedCat === "PRIZES & WILDCARD"
+    ? faqs.filter((f) => f.category === "PRIZES" || f.category === "WILDCARD")
+    : faqs.filter((f) => f.category === selectedCat);
+
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="relative bg-lab-black py-28 px-6 overflow-hidden">
-      <div className="relative max-w-3xl mx-auto">
+    <section id="faq" className="relative bg-lab-black py-24 sm:py-28 px-6 overflow-hidden">
+      {/* Subtle ambient glow */}
+      <div className="absolute top-1/3 right-1/4 w-[500px] h-[350px] bg-lab-orange/[0.06] rounded-full blur-[160px] pointer-events-none" />
+
+      <div className="relative max-w-4xl mx-auto z-10">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-charcoal/90 border border-lab-orange/30 backdrop-blur-md mb-4 shadow-md">
             <HelpCircle className="w-3.5 h-3.5 text-lab-orange" />
-            <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
-              KNOWLEDGE BASE
+            <span className="font-oxanium text-xs tracking-[0.25em] text-lab-cream font-bold uppercase">
+              KNOWLEDGE BASE // FREQUENTLY ASKED QUESTIONS
             </span>
           </div>
-          <h2 className="font-display text-4xl sm:text-5xl font-black text-lab-cream tracking-tight">
-            FREQUENTLY ASKED <span className="text-lab-orange">QUESTIONS</span>
-          </h2>
-        </motion.div>
 
-        <div className="space-y-3.5">
-          {faqs.map((item, i) => {
-            const isOpen = openIndex === i;
-            return (
-              <motion.div
-                key={item.q}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ delay: i * 0.05, duration: 0.4 }}
-                className={`border rounded-xl transition-all duration-200 overflow-hidden ${
-                  isOpen
-                    ? "bg-lab-charcoal/90 border-lab-orange/40 shadow-lg shadow-lab-orange/5"
-                    : "bg-lab-charcoal/50 border-white/[0.08] hover:border-white/20"
+          <h2 className="font-oxanium text-4xl sm:text-5xl font-black text-lab-cream tracking-[0.02em] uppercase">
+            FREQUENTLY ASKED{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-lab-orange to-orange-500 filter drop-shadow-[0_0_25px_rgba(242,121,42,0.4)]">
+              QUESTIONS
+            </span>
+          </h2>
+          <p className="text-lab-cream/70 font-rajdhani font-semibold text-sm sm:text-base tracking-[0.18em] uppercase max-w-md mx-auto mt-2 mb-8">
+            INSTANT ANSWERS TO COMMON INQUIRIES
+          </p>
+
+          {/* Category Filter Pills */}
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {faqCategories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => {
+                  setSelectedCat(cat);
+                  setOpenIndex(0);
+                }}
+                className={`px-4 py-1.5 rounded-xl font-oxanium text-xs font-bold tracking-wider uppercase transition-all duration-200 ${
+                  selectedCat === cat
+                    ? "bg-lab-orange text-lab-black shadow-md shadow-lab-orange/25 scale-105"
+                    : "bg-lab-charcoal/80 border border-white/[0.08] text-lab-cream/70 hover:text-white hover:border-lab-orange/40"
                 }`}
               >
-                <button
-                  onClick={() => toggle(i)}
-                  aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left transition-colors focus:outline-none"
-                >
-                  <span className="text-lab-cream font-medium text-sm sm:text-base tracking-wide">
-                    {item.q}
-                  </span>
-                  <motion.span
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ duration: 0.25 }}
-                    className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-lab-orange"
-                  >
-                    <ChevronDown size={16} />
-                  </motion.span>
-                </button>
+                {cat}
+              </button>
+            ))}
+          </div>
+        </motion.div>
 
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25 }}
+        {/* FAQs Accordion */}
+        <div className="space-y-3.5 mb-16">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={selectedCat}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+              className="space-y-3.5"
+            >
+              {filteredFaqs.map((item, i) => {
+                const isOpen = openIndex === i;
+                return (
+                  <motion.div
+                    key={item.q}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ delay: i * 0.04, duration: 0.35 }}
+                    className={`rounded-2xl transition-all duration-300 overflow-hidden border backdrop-blur-xl ${
+                      isOpen
+                        ? "bg-lab-charcoal/95 border-lab-orange/50 shadow-[0_8px_30px_rgba(242,121,42,0.12)] ring-1 ring-lab-orange/30"
+                        : "bg-lab-charcoal/60 border-white/[0.08] hover:border-lab-orange/40 hover:bg-lab-charcoal/80"
+                    }`}
+                  >
+                    <button
+                      onClick={() => toggle(i)}
+                      aria-expanded={isOpen}
+                      className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left transition-colors focus:outline-none group"
                     >
-                      <p className="px-6 pb-6 text-lab-cream/70 text-sm leading-relaxed border-t border-white/[0.06] pt-4">
-                        {item.a}
-                      </p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </motion.div>
-            );
-          })}
+                      <span className={`font-oxanium font-bold text-sm sm:text-base tracking-wide transition-colors ${isOpen ? "text-amber-300" : "text-lab-cream group-hover:text-amber-300"}`}>
+                        {item.q}
+                      </span>
+                      <motion.span
+                        animate={{ rotate: isOpen ? 180 : 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="flex-shrink-0 w-8 h-8 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-lab-orange group-hover:border-lab-orange/40"
+                      >
+                        <ChevronDown size={16} />
+                      </motion.span>
+                    </button>
+
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.25 }}
+                        >
+                          <p className="px-6 pb-6 text-lab-cream/80 text-sm leading-relaxed border-t border-white/[0.06] pt-4 font-body">
+                            {item.a}
+                          </p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </AnimatePresence>
         </div>
+
+        {/* Bottom Handbook Action Terminal */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="rounded-2xl bg-gradient-to-r from-lab-charcoal/95 via-lab-black to-lab-charcoal/95 border border-lab-orange/40 p-8 text-center shadow-2xl backdrop-blur-xl relative overflow-hidden"
+        >
+          <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-lab-orange to-transparent" />
+
+          <h3 className="font-oxanium text-2xl sm:text-3xl font-black text-lab-cream uppercase mb-2">
+            READY TO CLAIM YOUR SPOT IN THE ARENA?
+          </h3>
+          <p className="text-lab-cream/70 font-body text-sm sm:text-base max-w-xl mx-auto mb-6">
+            Registrations are 100% free and strictly capped at 50 teams. Assemble your 3–4 member squad and register on Unstop before capacity is reached.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <RegisterButton size="default" />
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.04] border border-white/[0.12] hover:border-lab-orange/50 text-lab-cream hover:text-amber-300 font-oxanium font-bold text-sm tracking-wider uppercase transition-all"
+            >
+              <Home className="w-4 h-4" />
+              <span>RETURN TO HOME</span>
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
