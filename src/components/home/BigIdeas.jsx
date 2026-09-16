@@ -29,11 +29,18 @@ export default function BigIdeas() {
 
   return (
     <section className="relative bg-lab-black py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background inventor silhouette artwork */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-35 pointer-events-none"
-        style={{ backgroundImage: "url('/assets/inventor-silhouette.jpg')" }}
-      />
+             {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+      >
+        <source src="/assets/phineas-idea-build1.mp4" type="video/mp4" />
+      </video> 
+      {/* Light overlay just for text contrast */}
+      <div className="absolute inset-0 bg-lab-black/35 pointer-events-none" />
       {/* Ambient gradient fades */}
       <div className="absolute inset-0 bg-gradient-to-b from-lab-black via-lab-black/90 to-lab-black pointer-events-none" />
 
