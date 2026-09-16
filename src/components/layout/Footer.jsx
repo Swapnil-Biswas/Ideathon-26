@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
-import { 
-  Instagram, 
-  MapPin, 
-  Calendar, 
-  Trophy, 
-  ArrowUp, 
-  ExternalLink, 
-  Users 
+import {
+  Instagram,
+  Linkedin,
+  MapPin,
+  Calendar,
+  Trophy,
+  ArrowUp,
+  ExternalLink,
+  Users
 } from "lucide-react";
 import { eventConfig } from "../../config/eventConfig";
 import PerryEasterEgg from "../shared/PerryEasterEgg";
@@ -77,7 +78,7 @@ export default function Footer() {
       {/* Main 4-Column Grid */}
       <div className="relative max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
-          
+
           {/* Column 1: Organization & Identity (Col span 4) */}
           <div className="lg:col-span-4 space-y-5">
             <Link to="/" className="flex items-center gap-3 group select-none">
@@ -110,6 +111,17 @@ export default function Footer() {
                   className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:border-lab-orange/60 hover:bg-lab-orange/10 flex items-center justify-center text-lab-cream/70 hover:text-lab-orange transition-all"
                 >
                   <Instagram size={17} />
+                </a>
+              )}
+              {eventConfig.linkedinUrl && (
+                <a
+                  href={eventConfig.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="ARMS LinkedIn"
+                  className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:border-lab-orange/60 hover:bg-lab-orange/10 flex items-center justify-center text-lab-cream/70 hover:text-lab-orange transition-all"
+                >
+                  <Linkedin size={17} />
                 </a>
               )}
               <a
@@ -207,7 +219,7 @@ export default function Footer() {
               <span>VENUE LOCATION</span>
               <span className="text-[10px] font-oxanium text-lab-cream/40">BMSIT&amp;M</span>
             </h4>
-            
+
             {/* Embedded Google Map */}
             <div className="relative rounded-xl border border-white/[0.1] overflow-hidden bg-lab-charcoal shadow-md group">
               <iframe
@@ -233,7 +245,6 @@ export default function Footer() {
               <ExternalLink className="w-3 h-3 text-lab-orange flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
             </a>
           </div>
-
         </div>
       </div>
 
@@ -244,7 +255,6 @@ export default function Footer() {
             <span>© 2026 ARMS (Advanced Robotics and Mechatronics Society). All rights reserved.</span>
             <PerryEasterEgg />
           </div>
-
           <div className="flex items-center gap-4">
             <span className="text-[11px] font-oxanium font-semibold text-lab-orange/80 tracking-widest uppercase">
               BMSIT&amp;M // CONCEPTIA 2026
