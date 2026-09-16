@@ -41,6 +41,17 @@ const specs = [
 export default function TeamRequirements() {
   return (
     <section id="requirements" className="relative bg-lab-charcoal py-24 sm:py-28 px-6 overflow-hidden">
+           {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none"
+      >
+        <source src="/assets/gang.mp4" type="video/mp4" />
+      </video>
+
       {/* Subtle ambient amber aura */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-lab-orange/[0.07] rounded-full blur-[160px] pointer-events-none" />
 
