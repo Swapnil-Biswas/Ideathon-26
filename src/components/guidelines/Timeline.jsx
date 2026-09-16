@@ -110,11 +110,15 @@ export default function Timeline() {
   const filteredStages = activeFilter === "all"
     ? timelineData
     : timelineData.filter((s) => s.period === activeFilter);
-
   return (
+    
     <section id="timeline" className="relative bg-lab-charcoal py-24 sm:py-28 px-6 overflow-hidden">
       {/* Background ambient center glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-lab-orange/[0.06] rounded-full blur-[180px] pointer-events-none" />
+
+      {/* Background ambient center glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-lab-orange/[0.06] rounded-full blur-[180px] pointer-events-none" />
+ 
 
       <div className="relative max-w-5xl mx-auto z-10">
         {/* Header */}
