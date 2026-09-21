@@ -21,7 +21,6 @@ export default function Footer() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Overview", href: "/#overview" },
-    { label: "Hardware Domains", href: "/#domains" },
     { label: "Roadmap", href: "/#roadmap" },
     { label: "Highlights & Prizes", href: "/#highlights" },
     { label: "Timeline & Schedule", href: "/guidelines#timeline" },
@@ -48,17 +47,17 @@ export default function Footer() {
       <div className="relative border-b border-white/[0.08] bg-lab-charcoal/50 backdrop-blur-md py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lab-black/80 border border-lab-orange/30 mb-3">
+            <div className="inline-flex items-center gap-2 mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-lab-orange animate-pulse" />
               <span className="font-oxanium text-[11px] font-bold text-lab-orange tracking-widest uppercase">
-                REGISTRATIONS ACTIVE // 50 TEAMS CAP
+                REGISTRATIONS ACTIVE // 55 TEAMS CAP
               </span>
             </div>
             <h3 className="font-oxanium text-2xl sm:text-3xl font-black text-lab-cream uppercase tracking-wide">
               READY TO BUILD AT <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-lab-orange">CONCEPTIA '26?</span>
             </h3>
             <p className="text-lab-cream/70 text-sm font-body max-w-xl mt-1">
-              Join 50 elite student hardware teams on 14th October 2026. Compete across 3 rounds for ₹15,000 in cash prizes and fast-tracked corporate internships.
+              Join 55 elite student hardware teams on 14th October 2026. Compete across 3 rounds for ₹15,000 in cash prizes.
             </p>
           </div>
 
@@ -183,7 +182,7 @@ export default function Footer() {
                 <Calendar className="w-4 h-4 text-lab-orange flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-oxanium font-bold text-lab-cream text-[13px]">{eventConfig.eventDate}</p>
-                  <p className="text-[11px] text-lab-cream/60">09:00 AM – 04:25 PM IST (One Day)</p>
+                  <p className="text-[11px] text-lab-cream/60">08:00 AM – 06:30 PM IST (One Day)</p>
                 </div>
               </div>
 
@@ -199,7 +198,7 @@ export default function Footer() {
                 <Trophy className="w-4 h-4 text-lab-orange flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-oxanium font-bold text-amber-300 text-[13px]">{eventConfig.prizePool} PRIZE POOL</p>
-                  <p className="text-[11px] text-lab-cream/60">1st: ₹7K + Corporate Internship</p>
+                  <p className="text-[11px] text-lab-cream/60">1st: ₹7K, 2nd:₹5K, 3rd:₹3K</p>
                 </div>
               </div>
 
@@ -207,7 +206,7 @@ export default function Footer() {
                 <Users className="w-4 h-4 text-lab-orange flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-oxanium font-bold text-lab-cream text-[13px]">3–4 MEMBERS PER TEAM</p>
-                  <p className="text-[11px] text-lab-cream/60">100% Free Entry • 50 Teams Capped</p>
+                  <p className="text-[11px] text-lab-cream/60">100% Free Entry • 55 Teams Capped</p>
                 </div>
               </div>
             </div>
