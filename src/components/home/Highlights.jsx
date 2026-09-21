@@ -9,35 +9,30 @@ const highlights = [
     detail: "Cash rewards: ₹7,000 for 1st place, ₹5,000 for 2nd, and ₹3,000 for 3rd place champions.",
     code: "REWARD-01",
   },
-  {
-    icon: Briefcase,
-    title: "FAST-TRACK INTERNSHIP",
-    detail: "Winning team secures an exclusive fast-tracked corporate internship opportunity.",
-    code: "CAREER-02",
-  },
+  
   {
     icon: FileCode,
     title: "5 CORPORATE BRIEFS",
     detail: "Solve real-world industrial engineering problem statements formulated by our partner company.",
-    code: "CHALLENGE-03",
+    code: "CHALLENGE-02",
   },
   {
     icon: Users,
     title: "FREE ENTRY (50 TEAMS)",
     detail: "Zero registration fees; capped strictly at 50 teams of 3–4 students to ensure high competitiveness.",
-    code: "ACCESS-04",
+    code: "ACCESS-03",
   },
   {
     icon: Layers,
     title: "ANY PRESENTATION FORMAT",
     detail: "Freedom to pitch via slide deck (PPT), poster display, or pure verbal pitch with visual aids.",
-    code: "PITCH-05",
+    code: "PITCH-04",
   },
   {
     icon: Award,
     title: "INDUSTRY JURY & EXPO",
     detail: "Direct live pitch evaluation and career networking with corporate engineering executives.",
-    code: "EXPO-06",
+    code: "EXPO-05",
   },
 ];
 
@@ -61,7 +56,7 @@ export default function Highlights() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-4">
+          <div className="inline-flex items-center gap-2 mb-4">
             <span className="font-mono text-xs tracking-[0.2em] text-lab-cream/85 uppercase">
               SYSTEM ARCHITECTURE
             </span>
@@ -70,7 +65,7 @@ export default function Highlights() {
             WHAT'S WAITING <span className="text-lab-orange">INSIDE?</span>
           </h2>
           <p className="text-lab-cream/60 font-mono text-sm max-w-md mx-auto mt-3">
-            SIX CORE PILLARS POWERING CONCEPTIA '26
+            FIVE CORE PILLARS POWERING CONCEPTIA '26
           </p>
         </motion.div>
 
