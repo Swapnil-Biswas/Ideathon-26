@@ -16,7 +16,7 @@ const specs = [
     icon: ShieldCheck,
     label: "PARTICIPANT CAP",
     value: "50 Teams Capped",
-    subtext: "Limited to 50 teams on a first-come, first-served basis via Unstop.",
+    subtext: "Limited to 55 teams on a first-come, first-served basis via Unstop.",
     tag: "CAP STRICTLY ENFORCED",
     code: "REQ-02",
   },
@@ -24,7 +24,7 @@ const specs = [
     icon: Globe,
     label: "REGISTRATION FEE",
     value: "100% Free (No Fee)",
-    subtext: "Zero registration fees; breakfast, lunch, refreshments & kit provided.",
+    subtext: "Zero registration fees,refreshments will be provided.",
     tag: "FREE ENTRY PASS",
     code: "REQ-03",
   },
@@ -32,7 +32,7 @@ const specs = [
     icon: MapPin,
     label: "ON-CAMPUS VENUE",
     value: eventConfig.venue,
-    subtext: "BMSIT&M Bengaluru • 14th October 2026 (Full-day intensive hackathon).",
+    subtext: "BMSIT&M Bengaluru • 14th October 2026.",
     tag: "IN-PERSON SPRINT",
     code: "REQ-04",
   },
@@ -63,7 +63,7 @@ export default function TeamRequirements() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-black/80 border border-lab-orange/30 backdrop-blur-md mb-4 shadow-md">
+          <div className="inline-flex items-center gap-2 mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-lab-orange animate-pulse" />
             <span className="font-oxanium text-xs tracking-[0.25em] text-lab-cream font-bold uppercase">
               SPECIFICATIONS // ELIGIBILITY
