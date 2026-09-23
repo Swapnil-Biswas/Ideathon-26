@@ -67,7 +67,7 @@ export default function WhatToBring() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-charcoal/90 border border-lab-orange/30 backdrop-blur-md mb-4 shadow-md">
+                    <div className="inline-flex items-center gap-2 mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-lab-orange animate-pulse" />
             <span className="font-oxanium text-xs tracking-[0.25em] text-lab-cream font-bold uppercase">
               HACKER ARSENAL // PRE-EVENT CHECKLIST
