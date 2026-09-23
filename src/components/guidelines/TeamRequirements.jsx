@@ -15,7 +15,7 @@ const specs = [
   {
     icon: ShieldCheck,
     label: "PARTICIPANT CAP",
-    value: "50 Teams Capped",
+    value: "55 Teams Capped",
     subtext: "Limited to 55 teams on a first-come, first-served basis via Unstop.",
     tag: "CAP STRICTLY ENFORCED",
     code: "REQ-02",
