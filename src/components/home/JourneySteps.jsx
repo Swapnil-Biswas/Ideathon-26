@@ -14,7 +14,7 @@ const journey = [
     num: "02",
     icon: Zap,
     title: "RAPID PITCH",
-    desc: "Top 20 teams deliver 90-second speed pitches on the main stage, alongside unrevealed surprise wildcard chances.",
+    desc: "Top 20 teams deliver 90-second speed pitches on the main stage — with a few surprises along the way.",
     tag: "ROUND 02 • SPEED"
   },
   {
@@ -58,7 +58,7 @@ export default function JourneySteps() {
           viewport={{ once: true }}
           className="text-center mb-16 sm:mb-20"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-black/80 border border-lab-orange/40 backdrop-blur-md mb-4 shadow-lg">
+          <div className="inline-flex items-center gap-2 mb-4 ">
             <span className="w-1.5 h-1.5 rounded-full bg-lab-orange animate-pulse" />
             <span className="font-oxanium text-xs tracking-[0.25em] text-lab-cream font-bold uppercase">
               THE ROADMAP // 4 STAGES
