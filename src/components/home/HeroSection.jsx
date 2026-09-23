@@ -338,8 +338,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lab-charcoal/80 border border-lab-orange/30 backdrop-blur-md mb-6"
-        >
+          className="inline-flex items-center gap-2 mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-lab-orange" />
           <span className="font-oxanium text-xs font-semibold tracking-[0.22em] text-lab-cream/90 uppercase">
             ARMS BMSIT PRESENTS
@@ -444,7 +443,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.85, duration: 0.6 }}
-          className="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-6 py-2.5 rounded-full bg-lab-charcoal/75 border border-lab-orange/40 backdrop-blur-md text-lab-cream/90 text-xs sm:text-sm font-mono tracking-wider mb-8 shadow-[0_0_25px_rgba(242,121,42,0.15)] hover:border-lab-orange/75 transition-all duration-300"
+         className="inline-flex items-center gap-2 mb-6"
         >
           <div className="flex items-center gap-2 text-lab-cream">
             <Calendar className="w-4 h-4 text-lab-orange" />
