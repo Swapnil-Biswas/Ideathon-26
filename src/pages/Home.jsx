@@ -1,13 +1,11 @@
 import HeroSection from "../components/home/HeroSection";
 import CountdownSection from "../components/home/CountdownSection";
 import WhatToday from "../components/home/WhatToday";
-import BigIdeas from "../components/home/BigIdeas";
 import JourneySteps from "../components/home/JourneySteps";
 import Highlights from "../components/home/Highlights";
 import AboutARMS from "../components/home/AboutARMS";
-import PosterSection from "../components/home/PosterSection";
 import FinalCTA from "../components/home/FinalCTA";
-
+import BrochureSection from "../components/home/BrochureSection";
 export default function Home() {
   return (
     <>
@@ -20,9 +18,6 @@ export default function Home() {
       <div id="overview">
         <WhatToday />
       </div>
-      <div id="domains">
-        <BigIdeas />
-      </div>
       <div id="roadmap">
         <JourneySteps />
       </div>
@@ -32,8 +27,8 @@ export default function Home() {
       <div id="about">
         <AboutARMS />
       </div>
-      <div id="poster">
-        <PosterSection />
+      <div id="brohure">
+        <BrochureSection />
       </div>
       <div id="register">
         <FinalCTA />
