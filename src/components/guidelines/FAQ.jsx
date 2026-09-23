@@ -8,17 +8,17 @@ const faqs = [
   {
     category: "GENERAL",
     q: "When and where is CONCEPTIA '26 taking place?",
-    a: "CONCEPTIA '26 is an in-person one-day ideathon taking place on 14th October 2026 (9:00 AM – 4:25 PM) at the BMSIT&M campus in Yelahanka, Bengaluru.",
+    a: "CONCEPTIA '26 is an in-person one-day ideathon taking place on 14th October 2026 (8:00 AM – 6:30 PM) at the BMSIT&M campus in Yelahanka, Bengaluru.",
   },
   {
     category: "REGISTRATION",
     q: "What is the team size and participant cap?",
-    a: "Teams must consist of strictly 3 to 4 members. Total participation is capped at 50 teams on a first-come, first-served basis via Unstop.",
+    a: "Teams must consist of strictly 3 to 4 members. Total participation is capped at 55 teams on a first-come, first-served basis via Unstop.",
   },
   {
     category: "REGISTRATION",
     q: "Is there any registration fee?",
-    a: "No! Entry for CONCEPTIA '26 is completely FREE. Morning refreshments, campus lunch, and official participant stationery are provided.",
+    a: "No! Entry for CONCEPTIA '26 is completely FREE. Refreshments will be provided to all registered participants."
   },
   {
     category: "ELIGIBILITY",
@@ -38,16 +38,16 @@ const faqs = [
   {
     category: "PRIZES",
     q: "What are the prizes and career incentives?",
-    a: "A total cash prize pool of ₹15,000 (1st: ₹7,000, 2nd: ₹5,000, 3rd: ₹3,000) plus fast-tracked corporate internship opportunities with our industry partner for the 1st prize winning team.",
+    a: "A total cash prize pool of ₹15,000 awaits the top three teams — ₹7,000 for 1st place, ₹5,000 for 2nd place, and ₹3,000 for 3rd place. Participants also get official certificates and the opportunity to showcase their ideas, tackle real-world problem statements, and gain valuable ideation and pitching experience."
   },
   {
-    category: "WILDCARD",
+    category: "SURPRISE",
     q: "What happens if our team gets eliminated in preliminary rounds?",
-    a: "Do not leave early! Unannounced surprise wildcard redemption challenges will take place live on event day, giving eliminated teams a legitimate chance to fight back into the 14 finalist positions.",
-  },
+    a:"Don’t leave early! An unannounced surprise will be revealed live on event day.Stay till the end — you never know what’s waiting for you."
+}
 ];
 
-const faqCategories = ["ALL", "REGISTRATION", "ROUNDS", "PRIZES & WILDCARD"];
+const faqCategories = ["ALL", "REGISTRATION", "ROUNDS", "PRIZES & SURPRISE"];
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -74,7 +74,7 @@ export default function FAQ() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-charcoal/90 border border-lab-orange/30 backdrop-blur-md mb-4 shadow-md">
+                    <div className="inline-flex items-center gap-2 mb-4">
             <HelpCircle className="w-3.5 h-3.5 text-lab-orange" />
             <span className="font-oxanium text-xs tracking-[0.25em] text-lab-cream font-bold uppercase">
               KNOWLEDGE BASE // FREQUENTLY ASKED QUESTIONS
@@ -189,7 +189,7 @@ export default function FAQ() {
             READY TO CLAIM YOUR SPOT IN THE ARENA?
           </h3>
           <p className="text-lab-cream/70 font-body text-sm sm:text-base max-w-xl mx-auto mb-6">
-            Registrations are 100% free and strictly capped at 50 teams. Assemble your 3–4 member squad and register on Unstop before capacity is reached.
+            Registrations are 100% free and strictly capped at 55 teams. Assemble your 3–4 member squad and register on Unstop before capacity is reached.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
