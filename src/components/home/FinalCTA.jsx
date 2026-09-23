@@ -11,7 +11,7 @@ export default function FinalCTA() {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-90 pointer-events-none"
       >
         <source src="/assets/phineas-ferb-portal.mp4" type="video/mp4" />
       </video>
@@ -35,7 +35,7 @@ export default function FinalCTA() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lab-charcoal border border-lab-orange/30 backdrop-blur-md mb-6"
+          className="inline-flex items-center gap-2 mb-6"
         >
           <Terminal className="w-3.5 h-3.5 text-lab-orange" />
           <span className="font-mono text-xs tracking-widest text-lab-cream/80 uppercase">
@@ -91,7 +91,7 @@ export default function FinalCTA() {
           className="flex items-center justify-center gap-2 text-lab-cream/50 text-xs font-mono tracking-wider mt-8"
         >
           <Sparkles className="w-3.5 h-3.5 text-lab-orange" />
-          <span>Free entry for 3–4 member teams. Winning team secures ₹7,000 + corporate internship opportunity.</span>
+          <span>Free entry for 3–4 member teams. Winning team secures ₹7,000 .</span>
         </motion.div>
       </div>
     </section>
