@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Trophy, Briefcase, FileCode, Users, Layers, Award } from "lucide-react";
+import { Trophy, FileCode, Users, Layers, Award } from "lucide-react";
 import SpotlightCard from "../reactbits/SpotlightCard";
 
 const highlights = [
@@ -82,7 +82,7 @@ export default function Highlights() {
               >
                 <SpotlightCard
                   spotlightColor="rgba(242, 121, 42, 0.2)"
-                  className="group relative bg-lab-charcoal/70 border-white/[0.08] hover:border-lab-orange/40 rounded-xl p-7 flex flex-col justify-between h-full"
+                  className="group relative bg-lab-charcoal/70 border-white/8 hover:border-lab-orange/40 rounded-xl p-7 flex flex-col justify-between h-full"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-6">
@@ -102,7 +102,7 @@ export default function Highlights() {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-white/[0.06] flex items-center justify-between">
+                  <div className="mt-6 pt-4 border-t border-white/6 flex items-center justify-between">
                     <span className="text-[11px] font-mono tracking-widest text-lab-cream/40 uppercase">
                       ACTIVE SPEC
                     </span>
