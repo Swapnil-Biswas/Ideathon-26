@@ -102,7 +102,7 @@ export default function GuidelinesHero() {
             <span>₹15,000 PRIZE POOL</span>
           </div>
           <div className="flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-2.5 text-emerald-400 text-xs sm:text-sm font-rajdhani font-bold tracking-wider">
-            <span>100% FREE ENTRY • 50 TEAMS CAPPED</span>
+            <span>100% FREE ENTRY • 55 TEAMS CAPPED</span>
           </div>
         </motion.div>
 
