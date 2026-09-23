@@ -171,7 +171,7 @@ export default function CountdownSection() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-charcoal/90 border border-lab-orange/40 backdrop-blur-md mb-5 shadow-lg shadow-black/50"
+          className="inline-flex items-center gap-2 mb-5"
         >
           <Clock className="w-4 h-4 text-lab-orange animate-pulse" />
           <span className="font-oxanium text-xs font-bold tracking-[0.25em] text-lab-cream uppercase">
@@ -199,7 +199,7 @@ export default function CountdownSection() {
           transition={{ delay: 0.2 }}
           className="font-rajdhani font-semibold text-xs sm:text-sm md:text-base text-lab-cream/70 tracking-[0.2em] uppercase max-w-xl mx-auto mb-16"
         >
-          OCTOBER 14, 2026 • 09:00 AM IST • BMSIT&amp;M BENGALURU
+          OCTOBER 14, 2026 • 08:00 AM IST • BMSIT&amp;M BENGALURU
         </motion.p>
 
         {/* 4 Cards Grid with Bright Orange Matrix Digits & Sliding Transitions */}
@@ -240,7 +240,7 @@ export default function CountdownSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-3 px-8 py-6 rounded-2xl bg-lab-orange/10 border border-lab-orange/40"
+            className="inline-flex items-center gap-2 mb-5"
           >
             <Flag className="w-8 h-8 text-lab-orange" />
             <span className="font-oxanium text-2xl sm:text-4xl font-black text-lab-orange tracking-wider">
