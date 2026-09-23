@@ -20,9 +20,9 @@ export default function GuidelinesHero() {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-80 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-110 pointer-events-none"
       >
-        <source src="/assets/rule.mp4" type="video/mp4" />
+        <source src="/assets/brilliant.mp4" type="video/mp4" />
       </video>
 
       {/* Subtle ambient amber glow */}
@@ -50,7 +50,7 @@ export default function GuidelinesHero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-charcoal/90 border border-lab-orange/40 backdrop-blur-md mb-6 shadow-lg shadow-black/50"
+          className="inline-flex items-center gap-2 mb-6"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-lab-orange animate-pulse" />
           <span className="font-oxanium text-xs tracking-[0.25em] text-lab-cream font-bold uppercase">
