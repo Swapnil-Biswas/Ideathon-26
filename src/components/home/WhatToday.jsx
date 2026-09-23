@@ -86,7 +86,7 @@ export default function WhatToday() {
             {/* Description Paragraph */}
             <p className="text-lab-cream/80 text-base sm:text-lg leading-relaxed max-w-xl mb-8 font-body">
               <strong className="text-lab-cream font-semibold font-oxanium">CONCEPTIA '26</strong> is a premier
-              one-day ideathon organized by ARMS at BMSIT&amp;M on 14th October 2026. 50 teams compete across 3 structured
+              one-day ideathon organized by ARMS at BMSIT&amp;M on 14th October 2026. 55 teams compete across 3 structured
               rounds, solving real-world engineering problem statements provided by our corporate industry partner.
             </p>
 
