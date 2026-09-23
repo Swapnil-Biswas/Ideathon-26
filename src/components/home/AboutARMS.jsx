@@ -15,7 +15,7 @@ export default function AboutARMS() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-charcoal/90 border border-lab-orange/40 backdrop-blur-md mb-4 shadow-lg">
+          <div className="inline-flex items-center gap-2 mb-4">
             <Cpu className="w-3.5 h-3.5 text-lab-orange" />
             <span className="font-oxanium text-xs tracking-[0.25em] text-lab-cream font-bold uppercase">
               ORGANIZING BODY // HOST SOCIETY
