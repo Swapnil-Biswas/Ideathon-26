@@ -29,19 +29,19 @@ const rules = [
   },
   {
     num: "05",
-    category: "PRIZES & WILDCARD",
-    title: "₹15,000 PRIZE POOL & CORPORATE INTERNSHIP",
-    content: "The ₹15,000 total cash prize pool is awarded as: 1st Prize ₹7,000, 2nd Prize ₹5,000, and 3rd Prize ₹3,000. Additionally, members of the 1st prize winning team secure fast-tracked corporate internship opportunities with our industry partner. All jury evaluations and scorecard verdicts are final.",
+    category: "PRIZES & SURPRISE",
+    title: "₹15,000 PRIZE POOL ",
+    content: "The ₹15,000 total cash prize pool is awarded as: 1st Prize ₹7,000, 2nd Prize ₹5,000, and 3rd Prize ₹3,000. All jury evaluations and scorecard verdicts are final.",
   },
   {
     num: "06",
-    category: "PRIZES & WILDCARD",
-    title: "SURPRISE WILDCARD REDEMPTION ROUNDS",
-    content: "Eliminated during the opening digital filter or rapid pitches? Do not pack up. Unannounced surprise wildcard redemption challenges will be unveiled live on event day, giving determined contenders an opportunity to fight their way back into the 14 finalist slots!",
+    category: "PRIZES & SURPRISE",
+    title: "SURPRISE",
+    content: "Eliminated during the opening quiz or rapid pitches? Don’t pack up just yet.Something unexpected is waiting to be revealed live on event day.The details stay secret. Stay ready. Your journey might not be over yet.",
   },
 ];
 
-const categories = ["ALL", "ELIGIBILITY", "FORMAT & ROUNDS", "PRIZES & WILDCARD"];
+const categories = ["ALL", "ELIGIBILITY", "FORMAT & ROUNDS", "PRIZES & SURPRISE"];
 
 export default function RulesAccordion() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -66,7 +66,7 @@ export default function RulesAccordion() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-black/80 border border-lab-orange/30 backdrop-blur-md mb-4 shadow-md">
+                    <div className="inline-flex items-center gap-2 mb-4">
             <Shield className="w-3.5 h-3.5 text-lab-orange" />
             <span className="font-oxanium text-xs tracking-[0.25em] text-lab-cream font-bold uppercase">
               CODE OF CONDUCT // OPERATIONAL PROTOCOLS
