@@ -7,7 +7,7 @@ const rules = [
     num: "01",
     category: "ELIGIBILITY",
     title: "TEAM COMPOSITION & FREE REGISTRATION",
-    content: "Each team must consist of strictly 3 to 4 currently enrolled undergraduate or postgraduate students. Cross-department, inter-branch, and cross-institutional teams are permitted. Registrations are strictly capped at 50 teams on a first-come, first-served basis via Unstop with 100% free entry. Mandatory physical college ID cards required at check-in.",
+    content: "Each team must consist of strictly 3 to 4 currently enrolled undergraduate or postgraduate students. Cross-department, inter-branch, and cross-institutional teams are permitted. Registrations are strictly capped at 55 teams on a first-come, first-served basis via Unstop with 100% free entry. Mandatory physical college ID cards required at check-in.",
   },
   {
     num: "02",
