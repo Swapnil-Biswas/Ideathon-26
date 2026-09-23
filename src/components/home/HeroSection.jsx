@@ -435,7 +435,7 @@ export default function HeroSection() {
           transition={{ delay: 0.75, duration: 0.6 }}
           className="max-w-2xl mx-auto text-lab-cream/80 text-sm sm:text-base md:text-lg font-normal leading-relaxed mb-6 font-body"
         >
-          A premier one-day ideation challenge organized by ARMS at BMSIT&amp;M — solve real-world industry problem statements, pitch to corporate judges, and win cash prizes plus fast-tracked internship opportunities.
+          A premier one-day ideation challenge organized by ARMS at BMSIT&amp;M — solve real-world industry problem statements, pitch to corporate judges, and win cash prizes .
         </motion.p>
 
         {/* Centered Date & Venue Pill Badge */}
