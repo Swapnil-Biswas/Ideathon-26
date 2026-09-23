@@ -18,8 +18,8 @@ const highlights = [
   },
   {
     icon: Users,
-    title: "FREE ENTRY (50 TEAMS)",
-    detail: "Zero registration fees; capped strictly at 50 teams of 3–4 students to ensure high competitiveness.",
+    title: "FREE ENTRY (55 TEAMS)",
+    detail: "Zero registration fees; capped strictly at 55 teams of 3–4 students to ensure high competitiveness.",
     code: "ACCESS-03",
   },
   {
