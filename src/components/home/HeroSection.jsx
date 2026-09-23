@@ -423,7 +423,7 @@ export default function HeroSection() {
         >
           <span>3 ROUNDS</span>
           <span className="text-lab-orange mx-2 sm:mx-4">•</span>
-          <span>50 TEAMS CAPPED</span>
+          <span>55 TEAMS CAPPED</span>
           <span className="text-lab-orange mx-2 sm:mx-4">•</span>
           <span>₹15,000 PRIZE POOL</span>
         </motion.div>
