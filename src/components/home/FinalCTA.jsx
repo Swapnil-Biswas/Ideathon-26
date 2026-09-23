@@ -70,7 +70,7 @@ export default function FinalCTA() {
           transition={{ delay: 0.3 }}
           className="text-lab-cream/60 text-xs font-mono tracking-[0.25em] mb-10 uppercase"
         >
-          14TH OCTOBER 2026 • BMSIT&amp;M BENGALURU • ₹15,000 PRIZE POOL • 50 TEAMS CAPPED
+          14TH OCTOBER 2026 • BMSIT&amp;M BENGALURU • ₹15,000 PRIZE POOL • 55 TEAMS CAPPED
         </motion.p>
 
         <motion.div
