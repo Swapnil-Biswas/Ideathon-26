@@ -13,7 +13,7 @@ export default function WhatToday() {
       num: "02",
       icon: Cpu,
       title: "RAPID PITCH & SURPRISE",
-      desc: "Top 20 teams deliver 90-second speed pitches on the main stage, alongside unrevealed surprise wildcard opportunities to claim a finalist spot.",
+      desc: "Top 20 teams deliver 90-second speed pitches on the main stage — with a few surprises along the way.",
     },
     {
       num: "03",
@@ -62,7 +62,7 @@ export default function WhatToday() {
             className="lg:col-span-7 flex flex-col justify-center"
           >
             {/* Top Tag without vibecoded effects */}
-            <div className="inline-flex items-center gap-2 text-lab-orange text-xs tracking-[0.22em] font-oxanium font-semibold mb-6 bg-lab-charcoal/80 px-3.5 py-1.5 rounded-lg border border-lab-orange/30 backdrop-blur-md w-fit">
+              <div className="inline-flex items-center gap-2 text-lab-orange text-xs tracking-[0.22em] font-oxanium font-semibold mb-6 w-fit">
               <span className="w-1.5 h-1.5 rounded-full bg-lab-orange" />
               <span>THE INVENTOR'S CALLING</span>
             </div>
