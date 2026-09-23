@@ -23,4 +23,5 @@ export const eventConfig = {
   unstopUrl: "https://unstop.com",
   contactEmail: "",
   instagramUrl: "https://instagram.com/arms.bmsit",
+  linkedinUrl: "https://linkedin.com/company/arms-bmsit",
 };
