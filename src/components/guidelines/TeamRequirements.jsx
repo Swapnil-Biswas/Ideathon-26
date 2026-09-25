@@ -47,7 +47,7 @@ export default function TeamRequirements() {
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-25 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
       >
         <source src="/assets/gang.mp4" type="video/mp4" />
       </video>
