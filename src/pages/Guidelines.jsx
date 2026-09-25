@@ -1,6 +1,6 @@
 import GuidelinesHero from "../components/guidelines/GuidelinesHero";
 import TeamRequirements from "../components/guidelines/TeamRequirements";
-import WhatToBring from "../components/guidelines/WhatToBring";
+// import WhatToBring from "../components/guidelines/WhatToBring";
 import RulesAccordion from "../components/guidelines/RulesAccordion";
 import JudgingCriteria from "../components/guidelines/JudgingCriteria";
 import Timeline from "../components/guidelines/Timeline";
@@ -11,7 +11,7 @@ export default function Guidelines() {
     <>
       <GuidelinesHero />
       <TeamRequirements />
-      <WhatToBring />
+      {/* <WhatToBring /> */}
       <RulesAccordion />
       <JudgingCriteria />
       <Timeline />
