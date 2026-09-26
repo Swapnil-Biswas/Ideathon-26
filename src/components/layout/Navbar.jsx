@@ -7,7 +7,6 @@ import RegisterButton from "../shared/RegisterButton";
 const NAV_TABS = [
   { id: "hero", label: "Home" },
   { id: "overview", label: "Overview" },
-  { id: "domains", label: "Domains" },
   { id: "roadmap", label: "Roadmap" },
   { id: "highlights", label: "Highlights" },
   { id: "about", label: "About ARMS" },

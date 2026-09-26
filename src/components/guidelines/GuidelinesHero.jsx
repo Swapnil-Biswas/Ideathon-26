@@ -13,18 +13,20 @@ export default function GuidelinesHero() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-lab-black px-6 pb-20 pt-36 sm:pt-40">
-      {/* Background ambient video from assets — subtle and high-tech */}
+    <section id="rules" className="relative bg-lab-charcoal py-24 sm:py-28 px-6 overflow-hidden">
+      {/* Background video */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-110 pointer-events-none"
       >
-        <source src="/assets/phineas-idea-build.mp4" type="video/mp4" />
+        <source src="/assets/brilliant.mp4" type="video/mp4" />
       </video>
 
+      {/* Subtle ambient amber glow */}
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[350px] bg-lab-orange/[0.07] rounded-full blur-[150px] pointer-events-none" />
       {/* Seamless top/bottom dark gradients */}
       <div className="absolute inset-0 bg-gradient-to-b from-lab-black/95 via-lab-black/85 to-lab-black pointer-events-none" />
 
@@ -48,7 +50,7 @@ export default function GuidelinesHero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lab-charcoal/90 border border-lab-orange/40 backdrop-blur-md mb-6 shadow-lg shadow-black/50"
+          className="inline-flex items-center gap-2 mb-6"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-lab-orange animate-pulse" />
           <span className="font-oxanium text-xs tracking-[0.25em] text-lab-cream font-bold uppercase">
@@ -100,7 +102,7 @@ export default function GuidelinesHero() {
             <span>₹15,000 PRIZE POOL</span>
           </div>
           <div className="flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-500/10 px-4 py-2.5 text-emerald-400 text-xs sm:text-sm font-rajdhani font-bold tracking-wider">
-            <span>100% FREE ENTRY • 50 TEAMS CAPPED</span>
+            <span>100% FREE ENTRY • 55 TEAMS CAPPED</span>
           </div>
         </motion.div>
 

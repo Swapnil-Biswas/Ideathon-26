@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
-import { 
-  Instagram, 
-  MapPin, 
-  Calendar, 
-  Trophy, 
-  ArrowUp, 
-  ExternalLink, 
-  Users 
+import {
+  Instagram,
+  Linkedin,
+  MapPin,
+  Calendar,
+  Trophy,
+  ArrowUp,
+  ExternalLink,
+  Users
 } from "lucide-react";
 import { eventConfig } from "../../config/eventConfig";
 import PerryEasterEgg from "../shared/PerryEasterEgg";
@@ -20,7 +21,6 @@ export default function Footer() {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Overview", href: "/#overview" },
-    { label: "Hardware Domains", href: "/#domains" },
     { label: "Roadmap", href: "/#roadmap" },
     { label: "Highlights & Prizes", href: "/#highlights" },
     { label: "Timeline & Schedule", href: "/guidelines#timeline" },
@@ -47,17 +47,17 @@ export default function Footer() {
       <div className="relative border-b border-white/[0.08] bg-lab-charcoal/50 backdrop-blur-md py-12 px-6">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lab-black/80 border border-lab-orange/30 mb-3">
+            <div className="inline-flex items-center gap-2 mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-lab-orange animate-pulse" />
               <span className="font-oxanium text-[11px] font-bold text-lab-orange tracking-widest uppercase">
-                REGISTRATIONS ACTIVE // 50 TEAMS CAP
+                REGISTRATIONS ACTIVE // 55 TEAMS CAP
               </span>
             </div>
             <h3 className="font-oxanium text-2xl sm:text-3xl font-black text-lab-cream uppercase tracking-wide">
               READY TO BUILD AT <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-lab-orange">CONCEPTIA '26?</span>
             </h3>
             <p className="text-lab-cream/70 text-sm font-body max-w-xl mt-1">
-              Join 50 elite student hardware teams on 14th October 2026. Compete across 3 rounds for ₹15,000 in cash prizes and fast-tracked corporate internships.
+              Join 55 elite student hardware teams on 14th October 2026. Compete across 3 rounds for ₹15,000 in cash prizes.
             </p>
           </div>
 
@@ -77,7 +77,7 @@ export default function Footer() {
       {/* Main 4-Column Grid */}
       <div className="relative max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
-          
+
           {/* Column 1: Organization & Identity (Col span 4) */}
           <div className="lg:col-span-4 space-y-5">
             <Link to="/" className="flex items-center gap-3 group select-none">
@@ -110,6 +110,17 @@ export default function Footer() {
                   className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:border-lab-orange/60 hover:bg-lab-orange/10 flex items-center justify-center text-lab-cream/70 hover:text-lab-orange transition-all"
                 >
                   <Instagram size={17} />
+                </a>
+              )}
+              {eventConfig.linkedinUrl && (
+                <a
+                  href={eventConfig.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="ARMS LinkedIn"
+                  className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:border-lab-orange/60 hover:bg-lab-orange/10 flex items-center justify-center text-lab-cream/70 hover:text-lab-orange transition-all"
+                >
+                  <Linkedin size={17} />
                 </a>
               )}
               <a
@@ -171,7 +182,7 @@ export default function Footer() {
                 <Calendar className="w-4 h-4 text-lab-orange flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-oxanium font-bold text-lab-cream text-[13px]">{eventConfig.eventDate}</p>
-                  <p className="text-[11px] text-lab-cream/60">09:00 AM – 04:25 PM IST (One Day)</p>
+                  <p className="text-[11px] text-lab-cream/60">08:00 AM – 06:30 PM IST (One Day)</p>
                 </div>
               </div>
 
@@ -187,7 +198,7 @@ export default function Footer() {
                 <Trophy className="w-4 h-4 text-lab-orange flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-oxanium font-bold text-amber-300 text-[13px]">{eventConfig.prizePool} PRIZE POOL</p>
-                  <p className="text-[11px] text-lab-cream/60">1st: ₹7K + Corporate Internship</p>
+                  <p className="text-[11px] text-lab-cream/60">1st: ₹7K, 2nd:₹5K, 3rd:₹3K</p>
                 </div>
               </div>
 
@@ -195,7 +206,7 @@ export default function Footer() {
                 <Users className="w-4 h-4 text-lab-orange flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-oxanium font-bold text-lab-cream text-[13px]">3–4 MEMBERS PER TEAM</p>
-                  <p className="text-[11px] text-lab-cream/60">100% Free Entry • 50 Teams Capped</p>
+                  <p className="text-[11px] text-lab-cream/60">100% Free Entry • 55 Teams Capped</p>
                 </div>
               </div>
             </div>
@@ -207,7 +218,7 @@ export default function Footer() {
               <span>VENUE LOCATION</span>
               <span className="text-[10px] font-oxanium text-lab-cream/40">BMSIT&amp;M</span>
             </h4>
-            
+
             {/* Embedded Google Map */}
             <div className="relative rounded-xl border border-white/[0.1] overflow-hidden bg-lab-charcoal shadow-md group">
               <iframe
@@ -233,7 +244,6 @@ export default function Footer() {
               <ExternalLink className="w-3 h-3 text-lab-orange flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
             </a>
           </div>
-
         </div>
       </div>
 
@@ -244,7 +254,6 @@ export default function Footer() {
             <span>© 2026 ARMS (Advanced Robotics and Mechatronics Society). All rights reserved.</span>
             <PerryEasterEgg />
           </div>
-
           <div className="flex items-center gap-4">
             <span className="text-[11px] font-oxanium font-semibold text-lab-orange/80 tracking-widest uppercase">
               BMSIT&amp;M // CONCEPTIA 2026

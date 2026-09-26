@@ -20,7 +20,8 @@ export const eventConfig = {
   secondPrize: "₹5,000",
   thirdPrize: "₹3,000",
 
-  unstopUrl: "https://unstop.com",
-  contactEmail: "",
+  unstopUrl: "https://unstop.com/competitions/conceptia-26-bms-institute-of-technology-and-management-bmsitm-bangalore-1759009",
+  contactEmail: "jagruthireddy83@gmail.com",
   instagramUrl: "https://instagram.com/arms.bmsit",
+  linkedinUrl: "https://linkedin.com/company/arms-bmsit",
 };
