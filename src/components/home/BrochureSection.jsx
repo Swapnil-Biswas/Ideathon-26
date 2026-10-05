@@ -49,8 +49,8 @@ export default function BrochureSection() {
 
         {/* Download Button */}
         <a
-          href="/assets/conceptia26-brochure.pdf"
-          download="CONCEPTIA26-Brochure.pdf"
+          href="/assets/CONCEPTIA26%20-%20brochure.pdf"
+          download="CONCEPTIA26 - brochure.pdf"
           className="inline-flex items-center gap-2 px-7 py-3.5 border border-lab-orange text-lab-orange font-mono text-xs sm:text-sm font-bold tracking-widest uppercase rounded-full hover:bg-lab-orange hover:text-lab-black transition-all duration-200 shadow-lg shadow-lab-orange/10"
         >
           <Download size={16} />
