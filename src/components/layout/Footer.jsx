@@ -202,12 +202,20 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-2.5">
+                            <div className="flex items-start gap-2.5">
                 <Users className="w-4 h-4 text-lab-orange flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-oxanium font-bold text-lab-cream text-[13px]">3–4 MEMBERS PER TEAM</p>
                   <p className="text-[11px] text-lab-cream/60">100% Free Entry • 55 Teams Capped</p>
                 </div>
+              </div>
+
+              <div className="pt-3 mt-1 border-t border-white/[0.06]">
+                <p className="font-oxanium font-bold text-lab-orange text-[11px] tracking-widest uppercase mb-1.5">
+                  CONTACT FOR QUERIES
+                </p>
+                <p className="text-[12px] text-lab-cream/80">Jagruthi: 63614 71654</p>
+                <p className="text-[12px] text-lab-cream/80">Sanjay: 63660 34898</p>
               </div>
             </div>
           </div>
