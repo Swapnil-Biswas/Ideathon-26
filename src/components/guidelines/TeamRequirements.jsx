@@ -14,10 +14,10 @@ const specs = [
   },
   {
     icon: ShieldCheck,
-    label: "PARTICIPANT CAP",
-    value: "55 Teams Capped",
-    subtext: "Limited to 55 teams on a first-come, first-served basis via Unstop.",
-    tag: "CAP STRICTLY ENFORCED",
+    label: "REGISTRATION DEADLINE",
+    value: "REGISTRATIONS CLOSES SOON",
+    subtext: "Registrations close on 9th October 2026 at 8:00 PM. Secure your spot before the deadline.",
+    tag: "DEADLINE APPROACHING",
     code: "REQ-02",
   },
   {

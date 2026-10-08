@@ -28,7 +28,7 @@ const timelineData = [
     name: "ROUND 1: ROBOTICS QUIZ",
     period: "morning",
     tag: "QUIZ CHALLENGE",
-    desc: "55 teams compete; top 20 advance to Round 2."
+    desc: "All the teams compete; top 20 advance to Round 2."
   },
   {
     id: 4,

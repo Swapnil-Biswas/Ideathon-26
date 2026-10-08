@@ -50,14 +50,14 @@ export default function Footer() {
             <div className="inline-flex items-center gap-2 mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-lab-orange animate-pulse" />
               <span className="font-oxanium text-[11px] font-bold text-lab-orange tracking-widest uppercase">
-                REGISTRATIONS ACTIVE // 55 TEAMS CAP
+                REGISTRATIONS ACTIVE 
               </span>
             </div>
             <h3 className="font-oxanium text-2xl sm:text-3xl font-black text-lab-cream uppercase tracking-wide">
               READY TO BUILD AT <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-lab-orange">CONCEPTIA '26?</span>
             </h3>
             <p className="text-lab-cream/70 text-sm font-body max-w-xl mt-1">
-              Join 55 elite student hardware teams on 14th October 2026. Compete across 3 rounds for ₹15,000 in cash prizes.
+              Join us at CONCEPTIA ’26 and compete across 3 exciting rounds, tackling real-world challenges for a chance to win from the ₹15,000 prize pool.
             </p>
           </div>
 
@@ -206,7 +206,7 @@ export default function Footer() {
                 <Users className="w-4 h-4 text-lab-orange flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="font-oxanium font-bold text-lab-cream text-[13px]">3–4 MEMBERS PER TEAM</p>
-                  <p className="text-[11px] text-lab-cream/60">100% Free Entry • 55 Teams Capped</p>
+                  <p className="text-[11px] text-lab-cream/60">100% Free Entry </p>
                 </div>
               </div>
 

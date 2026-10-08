@@ -18,8 +18,8 @@ const highlights = [
   },
   {
     icon: Users,
-    title: "FREE ENTRY (55 TEAMS)",
-    detail: "Zero registration fees; capped strictly at 55 teams of 3–4 students to ensure high competitiveness.",
+    title: "FREE ENTRY ",
+    detail: "Completely free for all participants, with zero registration fees. Open to eligible teams of 3–4 students, ensuring an accessible and competitive ideathon experience for everyone.",
     code: "ACCESS-03",
   },
   {
