@@ -12,8 +12,8 @@ const faqs = [
   },
   {
     category: "REGISTRATION",
-    q: "What is the team size and participant cap?",
-    a: "Teams must consist of strictly 3 to 4 members. Total participation is capped at 55 teams on a first-come, first-served basis via Unstop.",
+    q: "What is the team size and registration deadline?",
+    a: "Teams must consist of strictly 3 to 4 members. Registrations close on 9th October 2026 at 8:00 PM via unstop. Secure your spot before the deadline.",
   },
   {
     category: "REGISTRATION",
@@ -189,7 +189,7 @@ export default function FAQ() {
             READY TO CLAIM YOUR SPOT IN THE ARENA?
           </h3>
           <p className="text-lab-cream/70 font-body text-sm sm:text-base max-w-xl mx-auto mb-6">
-            Registrations are 100% free and strictly capped at 55 teams. Assemble your 3–4 member squad and register on Unstop before capacity is reached.
+            Registration is completely free! Gather your 3–4 member team and register on Unstop before 9th October 2026, 8:00 PM.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
